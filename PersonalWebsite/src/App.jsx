@@ -1,30 +1,36 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Header from "./Components/Header";
+
+import Home from "./Pages/Home";
+import Skills from './Pages/Skills';
+import WebApps from './Pages/WebApps';
+import Games from './Pages/Games';
+import Software from './Pages/Software';
+import Experience from './Pages/Experience';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Router>
+        <main className=" bg-gray-950 ">
+          <Header />
+            <div>
+              <Routes>
+                <Route exact path="/" element={<Home/>} />
+                <Route path="skills" element={<Skills/>}/>
+                <Route path="web_apps" element={<WebApps/>}/>
+                <Route path="games" element={<Games/>}/>
+                <Route path="software" element={<Software/>}/>
+                <Route path="experience" element={<Experience/>}/>
+              </Routes>
+            </div>
+          
+        </main>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -9,6 +9,8 @@ import WebApps from './Pages/WebApps';
 import Games from './Pages/Games';
 import Software from './Pages/Software';
 import Experience from './Pages/Experience';
+import Contact from './Pages/Contact';
+import Projects from './Pages/Projects';
 
 function App() {
   return (
@@ -18,12 +20,11 @@ function App() {
           <Header />
             <div>
               <Routes>
-                <Route exact path="/" element={<Home/>} />
-                <Route path="skills" element={<Skills/>}/>
-                <Route path="web_apps" element={<WebApps/>}/>
-                <Route path="games" element={<Games/>}/>
-                <Route path="software" element={<Software/>}/>
-                <Route path="experience" element={<Experience/>}/>
+                <Route exact path="/" element={<Home/>}/>
+                <Route path="/skills" element={<Skills/>}/>
+                <Route path="/projects" element={<Projects/>}/>
+                <Route path="/experience" element={<Experience/>}/>
+                <Route path="/contact" element={<Contact/>}/>
               </Routes>
             </div>
           

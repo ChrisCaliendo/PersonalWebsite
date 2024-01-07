@@ -24,7 +24,7 @@ const Skills = () => {
                 <SkillBar name="Angular" progress={20}/>
             </div>
             <div className=" bg-cyan-200 rounded-md shadow-md">
-                <p className="text-2xl text-center">Methedologies</p>
+                <p className="text-2xl text-center">Methodologies</p>
                 <SkillBar name="Object-Oriented-Programming" progress={100}/>
                 <SkillBar name="Agile Development" progress={60}/>
                 <SkillBar name="DevOps" progress={40}/>

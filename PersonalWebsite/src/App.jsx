@@ -16,9 +16,9 @@ function App() {
   return (
     <>
       <Router>
-        <main className=" bg-gray-950 ">
+        <main>
           <Header />
-            <div>
+            <div className='bg-emerald-500'>
               <Routes>
                 <Route exact path="/" element={<Home/>}/>
                 <Route path="/skills" element={<Skills/>}/>

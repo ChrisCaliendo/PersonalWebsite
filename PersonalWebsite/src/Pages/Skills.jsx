@@ -33,7 +33,7 @@ const Skills = () => {
                 <SkillBar name="Automated Testing" progress={40}/>
             </div>
             <div className=" bg-amber-200 rounded-md shadow-md">
-                <p className="text-2xl text-center">Software</p>
+                <p className="text-2xl text-center">Developer Tools</p>
                 <SkillBar name="Amazon Web Services" progress={60}/>
                 <SkillBar name="MongoDB" progress={60}/>
                 <SkillBar name="Firebase" progress={60}/>

@@ -2,8 +2,8 @@ const SkillBar = ({name, progress}) => {
     return (  
         <div className="px-5 pb-4 ">
             <div className="bg-white bg-opacity-50 rounded-t-lg">
-                <p className="opacity-100">
-                    {name}
+                <p className="pl-3 opacity-100">
+                    {name} 
                 </p>
             </div>
             <div className="bg-slate-400 bg-opacity-50 rounded-b-lg">

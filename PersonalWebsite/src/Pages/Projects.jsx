@@ -1,3 +1,8 @@
+import GameCard from "../Components/GameCard";
+import RigbyImage from "../Assets/RigbyImage.png";
+import TrashJobImage from "../Assets/TrashJobImage.png";
+import WalbangImage from "../Assets/WalbangImage.png";
+
 const Projects = () => {
     return ( 
         <>
@@ -74,9 +79,11 @@ const Projects = () => {
             </div>
             <mark class="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-blue-600 rounded dark:bg-blue-500">Games</mark>
             <div className="pl-3 bg-blue-300 rounded-md shadow-md">
-                <p>RiGBY</p>
-                <p></p>
-                
+                <GameCard
+                    title="RiGBY"
+                    desc="A platformer made with Unity and C#"
+                    photoUrl={RigbyImage}
+                />
             </div>
             <div className="pl-3 bg-blue-300 rounded-md shadow-md">
                 <p>Walbang!</p>

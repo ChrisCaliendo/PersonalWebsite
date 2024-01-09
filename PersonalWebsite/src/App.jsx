@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
 
 import Header from "./Components/Header";
 
@@ -18,7 +19,7 @@ function App() {
       <Router>
         <main>
           <Header />
-            <div className='bg-emerald-500'>
+            <div className=''>
               <Routes>
                 <Route exact path="/" element={<Home/>}/>
                 <Route path="/skills" element={<Skills/>}/>
@@ -27,7 +28,7 @@ function App() {
                 <Route path="/contact" element={<Contact/>}/>
               </Routes>
             </div>
-          
+            <Analytics/>
         </main>
       </Router>
     </>

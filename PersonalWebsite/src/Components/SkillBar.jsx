@@ -7,7 +7,7 @@ const SkillBar = ({name, progress}) => {
                 </p>
             </div>
             <div className="bg-slate-400 bg-opacity-50 rounded-b-lg">
-                <div className={` w-[${progress}%] opacity-100 bg-green-700 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-b-lg `}> 
+                <div className={`w-${progress}/12 opacity-100 bg-green-700 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-b-lg `}> 
                     {progress}%
                 </div> 
             </div>

@@ -3,7 +3,7 @@ import GETlogo from "../Assets/GETlogo.png"
 const Experience = () => {
     return ( 
         <>
-        <p className="text-4xl flex justify-center font-ptSans font-bold">Experience</p>
+        <p className="text-4xl bg-emerald-600 flex justify-center font-ptSans font-bold">Experience</p>
         
             
         <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 gap-4 p-4 place-content-evenly font-ptSans font-bold">

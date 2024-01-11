@@ -3,7 +3,7 @@ import SkillBar from "../Components/SkillBar";
 const Skills = () => {
     return ( 
         <>
-        <p className="text-4xl flex justify-center font-ptSans font-bold">Skills</p>
+        <p className="text-4xl bg-emerald-500 flex justify-center font-ptSans font-bold">Skills</p>
         <div className="bg-emerald-300 grid grid-rows-3 grid-cols-2 gap-4 p-4 place-content-evenly font-ptSans font-bold">
             <div className="bg-purple-400 rounded-md shadow-md">
                 <p className="text-2xl text-center">Coding Languages</p>

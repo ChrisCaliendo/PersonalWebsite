@@ -1,8 +1,11 @@
+import ProjectCard from "../Components/ProjectCard";
 import GameCard from "../Components/GameCard";
+
 import RigbyImage from '../Assets/RigbyImage.png';
 import TrashJobImage from "../Assets/TrashJobImage.png";
 import WalbangImage from "../Assets/WalbangImage.png";
-import ProjectCard from "../Components/ProjectCard";
+import EloquentImage from "../Assets/EloquentImage.png";
+import OmniswipeImage from "../Assets/OmniswipeImage.png";
 
 
 const Projects = () => {
@@ -16,7 +19,7 @@ const Projects = () => {
                 <ProjectCard
                     title="Eloquent Reviews"
                     elements="JavaScript, React.js, Tailwind, Python, Flask"
-                    photoUrl="https://eloquent-reviews.vercel.app/static/media/EloquentReviews.face59d0658d11ca1cb9.png"
+                    photoUrl={EloquentImage}
                     desc={
                         <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
                             <li>Performed as Sole Engineer of a dynamic web application to find and display product reviews</li>
@@ -33,7 +36,7 @@ const Projects = () => {
                 <ProjectCard
                     title="Cost Minus Drugs"
                     elements="MongoDB, Express, React.js, Node.js, ChakraUI"
-                    photoUrl="https://eloquent-reviews.vercel.app/static/media/EloquentReviews.face59d0658d11ca1cb9.png"
+                    photoUrl=""
                     desc={
                         <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
                             <li>Developed a prototype full-stack e-commerce website that distributes and sells generic drugs for affordable pricing, all with 24 hours</li>
@@ -49,12 +52,12 @@ const Projects = () => {
                 <ProjectCard
                     title="Omniswipe"
                     elements="React Native, Expo, Firebase Firestore, Git"
-                    photoUrl="https://eloquent-reviews.vercel.app/static/media/EloquentReviews.face59d0658d11ca1cb9.png"
+                    photoUrl={OmniswipeImage}
                     desc={
                         <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
-                            <li>Contributed to 5 major group projects involving programming with C# and Unity Game Engine to develop games</li>
-                            <li>Created and finished 2 award-winning and publicly accessible games with collaboration from many participants with wide variety of skill sets</li>
-                            <li>Managed team to develop AR technology using Unreal Engine and C++</li>
+                            <li>Developed a mobile dating application for both iOS and Android using React Native and Expo</li>
+                            <li>Composed recommendation systems that match users based on personal preferences, hobbies and appearances stored and sorted with Google Firestore as a user info cloud database</li>
+                            <li>Implemented user authentication using Firebase</li>
                         </ul>
                     }
                     gitLink="https://github.com/JuanPringle/OmniSwipe"
@@ -65,7 +68,7 @@ const Projects = () => {
                 <ProjectCard
                     title="Vehicle Cloud Management Software"
                     elements="Java, JFrame, MySQL, Git"
-                    photoUrl="https://eloquent-reviews.vercel.app/static/media/EloquentReviews.face59d0658d11ca1cb9.png"
+                    photoUrl=""
                     desc={
                         <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
                             <li>Served as lead programmer in the development of a Vehicular cloud program, alongside 3 other developers, using Java and JFrame</li>

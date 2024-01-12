@@ -38,7 +38,7 @@ const Skills = () => {
                 <SkillBar name="MongoDB" progress={60}/>
                 <SkillBar name="Firebase" progress={60}/>
                 <SkillBar name="Visual Studio" progress={60}/>
-                <SkillBar name="SQL" progress={40}/>
+                <SkillBar name="PostgreSQL" progress={40}/>
                 <SkillBar name="Docker" progress={20}/>
             </div>
         </div>

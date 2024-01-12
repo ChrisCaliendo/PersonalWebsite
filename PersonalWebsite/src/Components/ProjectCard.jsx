@@ -19,11 +19,19 @@ const ProjectCard = ({title, desc, photoBg, photoUrl, elements, depoLink, gitLin
             <div className="px-3 py-2 rounded-b-2xl border-t-4 border-slate-800 col-span-2 bg-slate-200">
                 {
                     depoLink!="" &&
-                    <p>Link to Deployment: {depoLink}</p>
+                    <a href={depoLink}>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">
+                            Go to Deployment Site
+                        </button>
+                    </a>
                 }
                 {
                     gitLink!="" &&
-                    <p>Link to GitHub: {gitLink}</p>
+                    <a href={gitLink} className="p-2">
+                        <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-2 rounded">
+                            Go to GitHub Page
+                        </button>
+                    </a>
                 }
                 
             </div>

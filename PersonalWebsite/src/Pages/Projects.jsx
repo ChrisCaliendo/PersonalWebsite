@@ -29,7 +29,7 @@ const Projects = () => {
                         </ul>
                     }
                     gitLink="https://github.com/ChrisCaliendo/EloquentReviews"
-                    depoLink=""
+                    depoLink="https://eloquent-reviews.vercel.app/"
                 />
             </div>
             <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">

@@ -7,7 +7,7 @@ const Experience = () => {
         
             
         <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 gap-4 p-4 place-content-evenly font-ptSans font-bold">
-        <mark class=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-blue-600 rounded dark:bg-blue-500">Work</mark>
+        <mark class=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded ">Work</mark>
             <div className="p-3  bg-orange-300 rounded-md shadow-md">
                 <div className=" grid grid-cols-2 grid-rows-1">
                     <div>
@@ -41,7 +41,7 @@ const Experience = () => {
                     <li>  Managed team to develop AR technology using Unreal Engine and C++</li>
                 </ul>
             </div>
-            <mark class="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-blue-600 rounded dark:bg-blue-500">Education</mark>
+            <mark class="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Education</mark>
             <div className="pl-3 bg-orange-300 rounded-md shadow-md">
                 <p>Bachelors Degree, in Computer Science</p>
                 <p>St. Johns University</p>

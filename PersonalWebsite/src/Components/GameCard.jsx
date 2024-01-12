@@ -1,15 +1,22 @@
-const GameCard = ({title, desc, photUrl}) => {
+const GameCard = ({title, desc, photoUrl, gameLink, note}) => {
     return ( 
-        <div className="grid grid-cols-2 grid-rows-1 place-content-center">
-            <div className="rounded-tl-2xl border-r-4 border-indigo-500 bg-slate-200">
-                <p>{title}</p>
+        <div className="p-2 grid grid-cols-1 grid-rows-1 place-content-center">
+            <div className="px-3 py-2 rounded-tl-2xl border-r-2 border-slate-800 bg-slate-200">
+                <p className="text-2xl">{title}</p>
                 <p className="italic">{desc}</p>
             </div>
-            <div className="rounded-tr-2xl border-l-4 border-indigo-500">
-                <img className="object-fill w-400 " src={photUrl} alt="" />
+            <div className="rounded-tr-2xl border-l-2 border-slate-800">
+                <img className="object-cover h-48 w-48 sm:w-80 md:w-80 lg:w-200 xl:w-200 2xl:w-200 rounded-tr-2xl" src={photoUrl} alt="No Photo Available :(" />
             </div>
-            <div className="col-span-2">
-                
+            <div className="px-3 py-2 rounded-b-2xl border-t-4 border-slate-800 col-span-2 bg-white bg-opacity-50">
+                {
+                    (gameLink!="" && gameLink!=null) ?
+                    <p>Link to Game: <a className="text-red-700" href={gameLink}>[Itch.io Page]</a></p>
+                    :
+                    <p>No link available at this time</p>
+                    
+                }
+                <p>{note}</p>
             </div>
 
         </div>

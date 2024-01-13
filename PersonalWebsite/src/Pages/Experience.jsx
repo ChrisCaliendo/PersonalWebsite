@@ -1,7 +1,8 @@
-import GETlogo from "../Assets/GETlogo.png"
-import QhstImage from "../Assets/QhstImage.jpeg"
-import StJohnsImage from "../Assets/StJohnsImage.png"
-import CareerAdvantageLogo from "../Assets/CareerAdvantageLogo.png"
+import GETlogo from "../Assets/GETlogo.png";
+import QhstImage from "../Assets/QhstImage.jpeg";
+import StJohnsImage from "../Assets/StJohnsImage.png";
+import CareerAdvantageLogo from "../Assets/CareerAdvantageLogo.jpeg";
+
 import ExpCard from "../Components/ExpCard";
 import EducationCard from "../Components/EducationCard";
 

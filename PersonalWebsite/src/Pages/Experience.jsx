@@ -1,5 +1,8 @@
 import GETlogo from "../Assets/GETlogo.png"
+import QhstImage from "../Assets/QhstImage.jpeg"
+import StJohnsImage from "../Assets/StJohnsImage.png"
 import ExpCard from "../Components/ExpCard";
+import EducationCard from "../Components/EducationCard";
 
 const Experience = () => {
     return ( 
@@ -9,7 +12,7 @@ const Experience = () => {
             
         <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 gap-4 p-4 place-content-evenly font-ptSans font-bold">
         <mark class=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded ">Work</mark>
-            <div className="p-1 bg-orange-300 rounded-3xl shadow-md">
+            <div className="p-1 bg-emerald-600 rounded-3xl shadow-md">
                 <ExpCard
                     title="Software Engineer"
                     employer="Career Advantage Inc."
@@ -24,7 +27,7 @@ const Experience = () => {
                     }
                 />
             </div>
-            <div className="p-1 bg-orange-300 rounded-3xl shadow-md">
+            <div className="p-1 bg-emerald-600 rounded-3xl shadow-md">
                 <ExpCard
                     title="Software Engineer"
                     employer="Gaming and Emerging Technologies Club"
@@ -37,18 +40,23 @@ const Experience = () => {
                         </ul>
                     }
                 />
-                
-                
             </div>
             <mark class="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Education</mark>
-            <div className="pl-3 bg-orange-300 rounded-md shadow-md">
-                <p>Bachelors Degree, in Computer Science</p>
-                <p>St. Johns University</p>
-                
+            <div className="p-1 bg-red-400 rounded-3xl shadow-md">
+                <EducationCard
+                    degree="Bachelors Degree, in Computer Science"
+                    place="Johns University"
+                    photoUrl={StJohnsImage}
+                />
             </div>
-            <div className="pl-3 bg-orange-300 rounded-md shadow-md">
-                <p>High School Degree</p>
-                <p>Queens Highschool of Teaching</p>
+            <div className="p-1 bg-red-400 rounded-3xl shadow-md">
+                <EducationCard
+                    degree="High School Degree"
+                    place="Queens Highschool of Teaching"
+                    photoUrl={QhstImage}
+                />
+                <p></p>
+                <p></p>
                 
             </div>
         </div>

@@ -8,10 +8,10 @@ const SkillBar = ({name, progress}) => {
             </div>
             <div className="bg-slate-400 bg-opacity-50 rounded-b-lg">
                 <div 
-                    className="opacity-100 p-2 bg-green-700 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-b-lg "
+                    className="opacity-100 p-2 bg-green-700 text-xs font-medium text-blue-100 text-center leading-none rounded-b-lg "
                     style={{width: `${progress}%`}}
                 > 
-                    
+                    {}
                 </div> 
             </div>
         </div>

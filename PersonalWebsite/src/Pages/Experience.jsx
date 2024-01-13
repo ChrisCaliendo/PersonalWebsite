@@ -1,8 +1,10 @@
 import GETlogo from "../Assets/GETlogo.png"
 import QhstImage from "../Assets/QhstImage.jpeg"
 import StJohnsImage from "../Assets/StJohnsImage.png"
+import CareerAdvantageLogo from "../Assets/CareerAdvantageLogo.png"
 import ExpCard from "../Components/ExpCard";
 import EducationCard from "../Components/EducationCard";
+
 
 const Experience = () => {
     return ( 
@@ -16,7 +18,7 @@ const Experience = () => {
                 <ExpCard
                     title="Software Engineer"
                     employer="Career Advantage Inc."
-                    photoUrl="https://media.licdn.com/dms/image/C4E0BAQF6OYSlqipOWQ/company-logo_200_200/0/1631329033032?e=1712793600&v=beta&t=R8S98_o1iY2opiVjjrW-mU0zX0inNv2rQZV8B9KpDjo"
+                    photoUrl={CareerAdvantageLogo}
                     desc={
                         <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
                             <li>Remade and reimagined company site using React and TailwindCSS</li>

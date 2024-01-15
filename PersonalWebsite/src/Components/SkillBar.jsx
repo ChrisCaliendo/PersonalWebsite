@@ -24,7 +24,7 @@ const SkillBar = ({name, progress}) => {
                     className="opacity-100 p-1 bg-green-700 text-xs font-medium text-blue-100 text-left leading-none rounded-b-lg "
                     style={{width: `${progress}%`}}
                 > 
-                <p className="pl-3 opacity-100">{level}</p>
+                <p className="pl-2 opacity-100">{level}</p>
                     
                 </div> 
             </div>

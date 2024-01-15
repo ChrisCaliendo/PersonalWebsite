@@ -7,15 +7,15 @@ import SocialLink from "../Components/SocialLink";
 const Contact = () => {
     return ( 
         <>
-                        <p className="text-4xl flex justify-center font-ptSans font-bold">Contact</p>
+                        <p className="text-4xl flex justify-center  font-ptSans font-bold">Contact</p>
 
         <div className="bg-emerald-500 grid lg:grid-cols-2 md:grid-cols-1 gap-40 place-content-around p-10 lg:p-20">
             
             <div className=" bg-emerald-800 text-white col-span-1 font-semibold">
                 <div className="border-b-4 border-white text-xl px-6 py-2" >
-                    <p>Follow Me</p>
+                    <p className=" text-center">Follow Me</p>
                 </div>
-                <div className="flex px-5 py-2 bg-emerald-700">
+                <div className="flex px-5 py-2 bg-emerald-700 place-content-center">
                     <SocialLink
                         picture={LinkedInIcon}
                         link="https://www.linkedin.com/in/christiancaliendo/"
@@ -38,9 +38,9 @@ const Contact = () => {
                     <br />
                     <br />
             </div>
-            <div className=" bg-emerald-800 text-white col-span-1 font-semibold">
+            <div className=" text-center bg-emerald-800 text-white col-span-1 font-semibold">
                 <div className="border-b-4 border-white text-xl px-6 py-2" >
-                    <p>Contact Me</p>
+                    <p className=" text-center">Contact Me</p>
                 </div>
                 <div className="px-5 py-2 bg-emerald-700">
                     <p>Email Me: christiantcaliendo@gmail.com</p>

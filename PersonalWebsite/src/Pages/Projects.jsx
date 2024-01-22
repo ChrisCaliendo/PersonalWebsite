@@ -80,6 +80,21 @@ const Projects = () => {
                     depoLink=""
                 />
             </div>
+            <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+                <ProjectCard
+                    title="Checklist Web Application"
+                    elements="JavaScript, HTML, CSS, Bootstraps"
+                    photoUrl=""
+                    desc={
+                        <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
+                            <li>Built a front-end single page application website for a personal task list manager</li>
+                            <li>Made with basic JavaScript, HTML and styled with basic CSS and Bootstraps</li>
+                        </ul>
+                    }
+                    gitLink="https://github.com/ChrisCaliendo/Web-Development"
+                    depoLink="https://chriscaliendo.github.io/Web-Development/"
+                />
+            </div>
             <mark class="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Games</mark>
             <div className="bg-blue-300 rounded-3xl shadow-md">
                 <GameCard

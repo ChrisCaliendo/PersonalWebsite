@@ -6,9 +6,6 @@ import Header from "./Components/Header";
 
 import Home from "./Pages/Home";
 import Skills from './Pages/Skills';
-import WebApps from './Pages/WebApps';
-import Games from './Pages/Games';
-import Software from './Pages/Software';
 import Experience from './Pages/Experience';
 import Contact from './Pages/Contact';
 import Projects from './Pages/Projects';

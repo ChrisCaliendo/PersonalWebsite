@@ -1,4 +1,4 @@
-const ProjectCard = ({title, desc, photoBg, photoUrl, elements, depoLink, gitLink}) => {
+const ProjectCard = ({title, desc, photoUrl, elements, depoLink, gitLink}) => {
     return ( 
         <div className=" p-2 grid grid-cols-1 grid-rows-1 place-content-center h-88">
             <div className="flex">

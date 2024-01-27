@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import HeaderLink from './HeaderLink';
+import PhoneHeaderLink from './PhoneHeaderLink';
 
 
 const Header = () => {
 
     const [isMobile, setIsMobile] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    
     
     useEffect(() => {
         const handleResize = () => {
@@ -34,11 +37,11 @@ const Header = () => {
             { isOpen &&
                 <div class="w-full" id="navbar-hamburger">
                 <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                    <li><Link className="transition ease-in-out duration-300 block py-2 px-3 text-white bg-green-700 rounded-top" to="/">Home</Link></li>
-                    <li><Link className="transition duration-300 block py-2 px-3 text-white bg-green-800" to="/skills">Skills</Link></li>
-                    <li><Link className="transition duration-300 block py-2 px-3 text-white bg-green-700" to="/experience">Experience</Link></li>
-                    <li><Link className="transition duration-300 block py-2 px-3 text-white bg-green-800" to="/projects">Projects</Link></li>
-                    <li><Link className="transition duration-300 block py-2 px-3 text-white bg-green-700" to="/contact">Contact</Link></li>
+                    <PhoneHeaderLink name="Home" pathway="/"/>
+                    <PhoneHeaderLink name="Skills" pathway="/skills"/>
+                    <PhoneHeaderLink name="Experience" pathway="/experience"/>
+                    <PhoneHeaderLink name="Projects" pathway="/projects"/>
+                    <PhoneHeaderLink name="Contact" pathway="/contect"/>
                 </ul>
                 </div>
             }
@@ -48,11 +51,11 @@ const Header = () => {
             <div className="container mx-auto flex items-center justify-between">
             <div className="text-white text-xl font-bold">Christian Caliendo</div>
             <ul className="flex space-x-4">
-                <li><Link className="p-1 pb-2 px-2 rounded-xl transition ease-in duration-150 text-white text-xl font-bold hover:text-slate-300 hover:bg-emerald-800" to="/">Home</Link></li>
-                <li><Link className="p-1 pb-2 px-2 rounded-xl transition ease-in-out duration-150 text-white text-xl font-bold hover:text-slate-300 hover:bg-emerald-800" to="/skills">Skills</Link></li>
-                <li><Link className="p-1 pb-2 px-2 rounded-xl transition ease-in-out duration-150 text-white text-xl font-bold hover:text-slate-300 hover:bg-emerald-800" to="/experience">Experience</Link></li>
-                <li><Link className="p-1 pb-2 px-2 rounded-xl transition ease-in-out duration-150 text-white text-xl font-bold hover:text-slate-300 hover:bg-emerald-800" to="/projects">Projects</Link></li>   
-                <li><Link className="p-1 pb-2 px-2 rounded-xl transition ease-in-out duration-150 text-white text-xl font-bold hover:text-slate-300 hover:bg-emerald-800" to="/contact">Contact</Link></li>
+                <HeaderLink name="Home" pathway="/"/>
+                <HeaderLink name="Skills" pathway="/skills"/>
+                <HeaderLink name="Experience" pathway="/experience"/>
+                <HeaderLink name="Projects" pathway="/projects"/>
+                <HeaderLink name="Contact" pathway="/contect"/>
             </ul>
             </div>
         }

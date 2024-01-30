@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
-import Header from "./Components/Header";
+import Header from "./Components/HeaderComponents/Header";
 
 import Home from "./Pages/Home";
 import Skills from './Pages/Skills';

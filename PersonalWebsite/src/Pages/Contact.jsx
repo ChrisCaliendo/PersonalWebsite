@@ -2,7 +2,7 @@ import GithubIcon from "../Assets/GithubIcon.png";
 import LinkedInIcon from "../Assets/LinkedInIcon.png";
 import ItchIcon from "../Assets/ItchIcon.png";
 
-import SocialLink from "../Components/SocialLink";
+import SocialLink from "../Components/OtherComponents/SocialLink";
 
 const Contact = () => {
     return ( 

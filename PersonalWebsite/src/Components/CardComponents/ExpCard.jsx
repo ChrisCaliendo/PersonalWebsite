@@ -1,7 +1,7 @@
 const ExpCard = ({title, desc, photoUrl, employer}) => {
     return ( 
         <div className=" p-2 grid grid-cols-1 grid-rows-1 place-content-center h-88">
-            <div className="">
+            <div>
             <div className={`flex px-3 pr-6 py-2 border-slate-800 bg-slate-200 col-span-1 grow justify-between rounded-t-2xl`}>
                 
                 <div>

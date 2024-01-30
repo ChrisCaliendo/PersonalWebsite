@@ -3,8 +3,8 @@ import QhstImage from "../Assets/QhstImage.jpeg";
 import StJohnsImage from "../Assets/StJohnsImage.png";
 import CareerAdvantageLogo from "../Assets/CareerAdvantageLogo.jpeg";
 
-import ExpCard from "../Components/ExpCard";
-import EducationCard from "../Components/EducationCard";
+import ExpCard from "../Components/CardComponents/ExpCard";
+import EducationCard from "../Components/CardComponents/EducationCard";
 
 
 const Experience = () => {
@@ -14,7 +14,7 @@ const Experience = () => {
         
             
         <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 gap-4 p-4 place-content-evenly font-ptSans font-bold">
-        <mark class=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded ">Work</mark>
+        <mark className=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded ">Work</mark>
             <div className="p-1 bg-emerald-600 rounded-3xl shadow-md">
                 <ExpCard
                     title="Software Engineer"
@@ -44,7 +44,7 @@ const Experience = () => {
                     }
                 />
             </div>
-            <mark class="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Education</mark>
+            <mark className="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Education</mark>
             <div className="p-1 bg-red-400 rounded-3xl shadow-md">
                 <EducationCard
                     degree="Bachelors Degree, in Computer Science"

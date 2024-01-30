@@ -1,5 +1,5 @@
-import ProjectCard from "../Components/ProjectCard";
-import GameCard from "../Components/GameCard";
+import ProjectCard from "../Components/CardComponents/ProjectCard";
+import GameCard from "../Components/CardComponents/GameCard";
 
 import RigbyImage from '../Assets/RigbyImage.png';
 import TrashJobImage from "../Assets/TrashJobImage.png";
@@ -14,7 +14,7 @@ const Projects = () => {
         <>
         <p className="text-4xl flex justify-center font-ptSans font-bold">Projects</p>
         <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 gap-4 p-4 place-content-evenly font-ptSans font-bold">
-        <mark class=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Work</mark>
+        <mark className=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Work</mark>
             <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
                 <ProjectCard
                     title="Eloquent Reviews"
@@ -95,7 +95,7 @@ const Projects = () => {
                     depoLink="https://chriscaliendo.github.io/Web-Development/"
                 />
             </div>
-            <mark class="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Games</mark>
+            <mark className="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Games</mark>
             <div className="bg-blue-300 rounded-3xl shadow-md">
                 <GameCard
                     title="RiGBY"

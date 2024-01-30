@@ -9,6 +9,12 @@ const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     
+    const location = useLocation();
+
+  // Define a function to determine if the link is active based on the current pathname
+    const isActive = (path) => {
+        return location.pathname === path ? 'active' : '';
+    };
     
     useEffect(() => {
         const handleResize = () => {
@@ -41,7 +47,7 @@ const Header = () => {
                     <PhoneHeaderLink name="Skills" pathway="/skills"/>
                     <PhoneHeaderLink name="Experience" pathway="/experience"/>
                     <PhoneHeaderLink name="Projects" pathway="/projects"/>
-                    <PhoneHeaderLink name="Contact" pathway="/contect"/>
+                    <PhoneHeaderLink name="Contact" pathway="/contact"/>
                 </ul>
                 </div>
             }
@@ -55,7 +61,7 @@ const Header = () => {
                 <HeaderLink name="Skills" pathway="/skills"/>
                 <HeaderLink name="Experience" pathway="/experience"/>
                 <HeaderLink name="Projects" pathway="/projects"/>
-                <HeaderLink name="Contact" pathway="/contect"/>
+                <HeaderLink name="Contact" pathway="/contact"/>
             </ul>
             </div>
         }

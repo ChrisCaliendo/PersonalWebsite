@@ -7,7 +7,7 @@ const HeaderLink = (props) => {
 
     return (  
         <li>
-            <Link className={`${location.pathname === props.pathway ? "text-emerald-800 bg-white" : "text-white hover:text-slate-300 hover:bg-emerald-800"} p-1 pb-2 px-2 rounded-xl transition ease-in-out duration-150  text-xl font-bold `} to={props.pathway}>{props.name}</Link>
+            <Link className={`${location.pathname === props.pathway ? "text-emerald-800 bg-white" : "text-white hover:text-slate-300 hover:bg-emerald-800"} p-1 pb-2 px-2 rounded-3xl transition ease-in-out duration-150  text-xl font-bold `} to={props.pathway}>{props.name}</Link>
         </li>
     );
 }

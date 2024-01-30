@@ -1,4 +1,4 @@
-import SkillBar from "../Components/SkillBar";
+import SkillBar from "../Components/OtherComponents/SkillBar";
 
 const Skills = () => {
     return ( 

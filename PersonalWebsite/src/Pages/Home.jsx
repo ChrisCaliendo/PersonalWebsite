@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import Arrow from "../Assets/Arrow.svg";
+
 const Home = () => {
     return ( 
         <>
@@ -5,6 +8,12 @@ const Home = () => {
             <div className="col-span-1 text-white text-6xl font-ptSans font-bold container">
                 <p className="">Hello, My name is </p>
                 <p className="">Christian Caliendo</p>
+                <div className=" py-12 container">
+                <Link to="/projects"><button className="flex my-3 bg-white text-slate-800 text-xl rounded-3xl p-2">See My Work <img src={Arrow} alt="Logo" width="30" /></button></Link>
+                <Link to="/experience"><button className="flex my-3 bg-white text-slate-800 text-xl rounded-3xl p-2">See My Experience <img src={Arrow} alt="Logo" width="30" /></button></Link>
+                
+                </div>
+                
             </div>
             <div className=" bg-emerald-800 text-white col-span-1 font-semibold">
                 <div className="border-b-4 border-white text-xl px-6 py-2" >

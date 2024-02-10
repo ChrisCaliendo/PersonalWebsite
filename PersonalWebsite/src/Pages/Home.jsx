@@ -9,8 +9,8 @@ const Home = () => {
                 <p className="">Hello, My name is </p>
                 <p className="">Christian Caliendo</p>
                 <div className=" py-12 container">
-                <Link to="/projects"><button className="flex my-3 bg-white text-slate-800 text-xl rounded-3xl p-2">See My Work <img src={Arrow} alt="Logo" width="30" /></button></Link>
-                <Link to="/experience"><button className="flex my-3 bg-white text-slate-800 text-xl rounded-3xl p-2">See My Experience <img src={Arrow} alt="Logo" width="30" /></button></Link>
+                <Link to="/projects"><button className="flex my-3 bg-white text-slate-800 text-xl rounded-3xl pl-5 p-2 hover:bg-slate-100 hover:shadow-lg hover:-translate-y-2 ease-in-out duration-100">See My Work <img src={Arrow} alt="Logo" width="30" /></button></Link>
+                <Link to="/experience"><button className="flex my-3 bg-white text-slate-800 text-xl rounded-3xl pl-5 p-2 hover:bg-slate-100 hover:shadow-lg hover:-translate-y-2 ease-in-out duration-100">See My Experience <img src={Arrow} alt="Logo" width="30" /></button></Link>
                 
                 </div>
                 

@@ -30,7 +30,7 @@ const ProjectCard = ({title, desc, photoUrl, elements, depoLink, gitLink}) => {
                 }
                 {
                     gitLink!="" &&
-                    <a href={gitLink} className="">
+                    <a href={gitLink} className="xs:py-2">
                         <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-2 rounded-xl">
                             Go to GitHub Page
                         </button>

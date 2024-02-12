@@ -13,7 +13,7 @@ const Projects = () => {
     return ( 
         <>
         <p className="text-4xl flex justify-center font-ptSans font-bold">Projects</p>
-        <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 gap-4 p-4 place-content-evenly font-ptSans font-bold">
+        <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:gap-8 md:gap-4 gap-4 p-4 md:mx-5 place-content-evenly font-ptSans font-bold md:rounded">
         <mark className=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Work</mark>
             <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
                 <ProjectCard
@@ -21,7 +21,7 @@ const Projects = () => {
                     elements="JavaScript, React.js, Tailwind, Python, Flask"
                     photoUrl={EloquentImage}
                     desc={
-                        <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
+                        <ul className="ps-5 pb-2 space-y-1 list-disc list-inside">
                             <li>Performed as Sole Engineer of a dynamic web application to find and display product reviews</li>
                             <li>Built a frontend with a responsive form and user interface to display reviews and alter preferences</li>
                             <li>Implemented back-end and web scraping capabilities with Python, Flask and BeautifulSoup to scrape from thousands of reviews from Steam</li>

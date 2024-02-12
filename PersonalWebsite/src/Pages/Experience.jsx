@@ -10,10 +10,10 @@ import EducationCard from "../Components/CardComponents/EducationCard";
 const Experience = () => {
     return ( 
         <>
-        <p className="text-4xl bg-emerald-500 flex justify-center font-ptSans font-bold">Experience</p>
+        <p className="text-4xl bg-emerald-400 flex justify-center font-ptSans font-bold">Experience</p>
         
             
-        <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 gap-4 p-4 place-content-evenly font-ptSans font-bold">
+        <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:gap-8 md:gap-4 gap-4 p-4 md:mx-5 place-content-evenly font-ptSans font-bold md:rounded">
         <mark className=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded ">Work</mark>
             <div className="p-1 bg-emerald-600 rounded-3xl shadow-md">
                 <ExpCard
@@ -48,7 +48,7 @@ const Experience = () => {
             <div className="p-1 bg-red-400 rounded-3xl shadow-md">
                 <EducationCard
                     degree="Bachelors Degree, in Computer Science"
-                    place="Johns University"
+                    place="St. John's University"
                     photoUrl={StJohnsImage}
                 />
             </div>

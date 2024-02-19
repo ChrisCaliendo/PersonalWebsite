@@ -14,7 +14,7 @@ const Experience = () => {
         
             
         <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:gap-8 md:gap-4 gap-4 p-4 md:mx-5 place-content-evenly font-ptSans font-bold md:rounded">
-        <mark className=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded ">Work</mark>
+        <mark className=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded ">Work Experience</mark>
             <div className="p-1 bg-emerald-600 rounded-3xl shadow-md">
                 <ExpCard
                     title="Software Engineer"
@@ -44,7 +44,7 @@ const Experience = () => {
                     }
                 />
             </div>
-            <mark className="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Education</mark>
+            <mark className="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Educational Experience</mark>
             <div className="p-1 bg-red-400 rounded-3xl shadow-md">
                 <EducationCard
                     degree="Bachelors Degree, in Computer Science"

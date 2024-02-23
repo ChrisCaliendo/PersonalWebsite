@@ -22,7 +22,7 @@ const Projects = () => {
                     photoUrl={EloquentImage}
                     desc={
                         <ul className="ps-5 pb-2 space-y-1 list-disc list-inside">
-                            <li>Performed as Sole Engineer of a dynamic web application to find and display product reviews</li>
+                            <li>Performed as Sole Engineer of a full stack dynamic web application to find and display product reviews</li>
                             <li>Built a frontend with a responsive form and user interface to display reviews and alter preferences</li>
                             <li>Implemented back-end and web scraping capabilities with Python, Flask and BeautifulSoup to scrape from thousands of reviews from Steam</li>
                             <li>Used the Steam API for text processing and sorting based on user preferences</li>
@@ -30,6 +30,22 @@ const Projects = () => {
                     }
                     gitLink="https://github.com/ChrisCaliendo/EloquentReviews"
                     depoLink="https://eloquent-reviews.vercel.app/"
+                />
+            </div>
+            <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+                <ProjectCard
+                    title="Web Analytics Dashboard"
+                    elements="Next.js, React.js, TypeScript, Redis"
+                    photoUrl=""
+                    desc={
+                        <ul className="ps-5 pb-2 space-y-1 list-disc list-inside">
+                            <li>Created an API to track user activity on personal website and projects and gauge effectiveness of SEO changes</li>
+                            <li>Tracks site analytics up to a week for hundreds of users and tracks userbase data like location, what pages user tend to visit more and where the majority of user traffic comes from </li>
+                            <li>Stored user and site data using Redis database through middleware on sites to then be called by a dashboard interface.</li>
+                        </ul>
+                    }
+                    gitLink="https://github.com/ChrisCaliendo/website_analytics_dashboard"
+                    depoLink=""
                 />
             </div>
             <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
@@ -96,28 +112,33 @@ const Projects = () => {
                 />
             </div>
             <mark className="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Games</mark>
-            <div className="bg-blue-300 rounded-3xl shadow-md">
+            <div className="bg-blue-300 rounded-3xl xl:col-span-1  shadow-md">
                 <GameCard
                     title="RiGBY"
-                    desc="A puzzle platformer made with Unity and C# with a team of 5 people over the course of a weeklong game jam"
+                    elements="Unity and C#"
+                    desc="A puzzle platformer game made with a team of 5 people over the course of a weeklong game jam. Won first place for a game jam hosted at St. Johns University."
                     photoUrl={RigbyImage}
                     gameLink="https://akrifel.itch.io/rigby"
                     note="Playable in browser or by download"
                 />
             </div>
-            <div className="bg-blue-300 rounded-3xl shadow-md">
+            <div className="bg-blue-300 rounded-3xl xl:col-span-1  shadow-md">
                 <GameCard
                     title="Walbang!"
-                    desc="A bullet hell shooter made with Unity and C# with 4 others under 48 hours"
+                    elements="Unity and C#"
+                    desc="A bullet hell shooter game made with a team of 4 others for a 48 hour game jam"
                     photoUrl={WalbangImage}
                     gameLink="https://sajid2001.itch.io/walbang"
                     note="Playable only by download"
                 />
             </div>
-            <div className="bg-blue-300 rounded-3xl shadow-md">
+            <div className="bg-blue-300 rounded-3xl xl:col-span-1  shadow-md">
                 <GameCard
                     title="Trash Job"
-                    desc="A small stealth made with Unity and C# with 3 others over a weekend"
+                    elements="Unity and C#"
+
+                    desc="A small stealth game with 3 others over a weekend timeperiod. Won first place for a game jam hosted at St. Johns University."
+                    
                     photoUrl={TrashJobImage}
                     gameLink="https://sajid2001.itch.io/trash-job"
                     note="Playable only by download"

@@ -1,4 +1,5 @@
 import GETlogo from "../Assets/GETlogo.png";
+import awsCP from "../Assets/awsCP.png";
 import QhstImage from "../Assets/QhstImage.jpeg";
 import StJohnsImage from "../Assets/StJohnsImage.png";
 import CareerAdvantageLogo from "../Assets/CareerAdvantageLogo.jpeg";
@@ -65,7 +66,7 @@ const Experience = () => {
                 <CertificateCard
                     title="Certified Cloud Practicioner"
                     company="Amazon Web Services"
-                    photoUrl={StJohnsImage}
+                    photoUrl={awsCP}
                     certLink="https://www.credly.com/badges/279841b4-e562-4bde-9169-61b23df670d4/linked_in_profile"
                 />
             </div>

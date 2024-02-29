@@ -5,6 +5,7 @@ import CareerAdvantageLogo from "../Assets/CareerAdvantageLogo.jpeg";
 
 import ExpCard from "../Components/CardComponents/ExpCard";
 import EducationCard from "../Components/CardComponents/EducationCard";
+import CertificateCard from "../Components/CardComponents/CertificateCard";
 
 
 const Experience = () => {
@@ -57,10 +58,16 @@ const Experience = () => {
                     degree="High School Degree"
                     place="Queens Highschool of Teaching"
                     photoUrl={QhstImage}
+                /> 
+            </div>
+            <mark className="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Certifications</mark>
+            <div className="p-1 rounded-3xl shadow-md bg-indigo-400">
+                <CertificateCard
+                    title="Certified Cloud Practicioner"
+                    company="Amazon Web Services"
+                    photoUrl={StJohnsImage}
+                    certLink="https://www.credly.com/badges/279841b4-e562-4bde-9169-61b23df670d4/linked_in_profile"
                 />
-                <p></p>
-                <p></p>
-                
             </div>
         </div>
         </>

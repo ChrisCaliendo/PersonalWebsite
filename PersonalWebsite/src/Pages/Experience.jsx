@@ -62,7 +62,7 @@ const Experience = () => {
                 /> 
             </div>
             <mark className="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Certifications</mark>
-            <div className="p-1 rounded-3xl shadow-md bg-indigo-400">
+            <div className="p-1 rounded-3xl shadow-md bg-indigo-400 lg:col-span-2 col-span-1 lg:w-1/2  justify-self-center">
                 <CertificateCard
                     title="Certified Cloud Practicioner"
                     company="Amazon Web Services"

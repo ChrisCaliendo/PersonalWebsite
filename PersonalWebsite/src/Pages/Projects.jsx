@@ -132,12 +132,13 @@ const Projects = () => {
                     note="Playable only by download"
                 />
             </div>
-            <div className="bg-blue-300 rounded-3xl xl:col-span-1  shadow-md">
+            
+            <div className="bg-blue-300 rounded-3xl shadow-md lg:col-span-2 col-span-1 lg:w-1/2 justify-self-center">
                 <GameCard
                     title="Trash Job"
                     elements="Unity and C#"
 
-                    desc="A small stealth game with 3 others over a weekend timeperiod. Won first place for a game jam hosted at St. Johns University."
+                    desc="A small stealth game with 3 others over a weekend time period. Won first place for a game jam hosted at St. Johns University."
                     
                     photoUrl={TrashJobImage}
                     gameLink="https://sajid2001.itch.io/trash-job"

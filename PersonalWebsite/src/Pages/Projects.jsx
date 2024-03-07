@@ -19,6 +19,7 @@ const Projects = () => {
                 <ProjectCard
                     title="Eloquent Reviews"
                     elements="JavaScript, React.js, Tailwind, Python, Flask"
+
                     photoUrl={EloquentImage}
                     desc={
                         <ul className="ps-5 pb-2 space-y-1 list-disc list-inside">
@@ -97,6 +98,22 @@ const Projects = () => {
                 />
             </div>
             <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+                <ProjectCard
+                    title="Airline Review Dashboard"
+                    elements="Tableau"
+                    photoUrl=""
+                    desc={
+                        <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
+                            <li>Built a dashboard for an airline reviews using Tableau with SQL data</li>
+                            <li>Created data visualizations that can display the change in user reviews over time in multiple catagories</li>
+                            <li> that can demopnstate the change in user reviews</li>
+                        </ul>
+                    }
+                    gitLink=""
+                    depoLink="https://public.tableau.com/app/profile/christian.caliendo/viz/AirlineReviewDashboard_17097834221560/Dashboard1?publish=yes"
+                />
+            </div>
+            <div className="p-1 bg-emerald-400 rounded-3xl shadow-md lg:col-span-2 col-span-1 lg:w-1/2 w-full justify-self-center">
                 <ProjectCard
                     title="Checklist Web Application"
                     elements="JavaScript, HTML, CSS, Bootstraps"

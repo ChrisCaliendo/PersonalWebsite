@@ -17,7 +17,7 @@ const ProjectCard = ({title, desc, photoUrl, elements, depoLink, gitLink}) => {
             
             
             <div className="grow row-end px-3 pt-3 border-t-4 border-slate-800 col-span-2 bg-white bg-opacity-50 h-full">
-                <p className="flex pb-4">{desc}</p>
+                <p className="flex pb-4 h-full">{desc}</p>
             </div>
             <div className="px-3 pt-2 rounded-b-2xl border-t-4 border-slate-800 col-span-2 bg-slate-200">
                 {

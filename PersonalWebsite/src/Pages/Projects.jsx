@@ -106,7 +106,7 @@ const Projects = () => {
                         <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
                             <li>Built a dashboard for an airline reviews using Tableau with SQL data</li>
                             <li>Created data visualizations that can display the change in user reviews over time in multiple catagories</li>
-                            <li> that can demopnstate the change in user reviews</li>
+                            <li>Designed an interactive dashboard that makes sorting though thousands of reviews managable</li>
                         </ul>
                     }
                     gitLink=""

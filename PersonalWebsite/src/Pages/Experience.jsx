@@ -24,10 +24,10 @@ const Experience = () => {
                     photoUrl={CareerAdvantageLogo}
                     desc={
                         <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
-                            <li>Remade and reimagined company site using React and TailwindCSS</li>
-                            <li>Hosted site using AWS: S3 and Route 53</li>
-                            <li>Engineered a dynamic webpage for job listing page to render and display hundreds of current job openings in the company based on job listing data</li>
-                            <li>Designed and made all pages and components with responsive web design</li>
+                            <li>Spearheaded the transformation of the company website using React and TailwindCSS, resulting in a modernized and user-friendly interface</li>
+                            <li>Engineered a dynamic job listing page for real-time display of hundreds of listings, boosting user efficiency</li>
+                            <li>Employed responsive web design techniques to optimize the website for seamless usage and accessibility across devices</li>
+                            <li>Implemented AWS infrastructure, leveraging S3 and Route 53, to ensure scalability and reliability of the hosted website</li>
                         </ul>
                     }
                 />
@@ -39,9 +39,10 @@ const Experience = () => {
                     photoUrl={GETlogo}
                     desc={
                         <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
-                            <li> Contributed to 5 major group projects involving programming with C# and Unity Game Engine to develop games</li>
-                            <li> Created and finished 2 award-winning and publicly accessible games with collaboration from many participants with wide variety of skill sets</li>
-                            <li>  Managed team to develop AR technology using Unreal Engine and C++</li>
+                            <li>Contributed to 5 major group projects involving programming with C# and Unity Game Engine to develop games with groups ranging from 4-8 people</li>
+                            <li>Created and finished 2 award-winning and publicly accessible games with collaboration from many participants with wide variety of skill sets</li>
+                            <li>Managed a team of 5 to develop AR technology using Unreal Engine and C++</li>
+                            <li>Designed over a hundred game assets for multiple projects as well as redesigned and redrew club logo</li>
                         </ul>
                     }
                 />

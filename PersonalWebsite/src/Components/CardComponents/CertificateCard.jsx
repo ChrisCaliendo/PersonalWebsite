@@ -21,7 +21,7 @@ const Certificatecard = ({title, company, photoUrl, certLink}) => {
                     (certLink!="" && certLink!=null) ?
                     <a href={certLink}>
                         <button className="bg-cyan-500 hover:bg-cyan-800 text-white font-bold py-1 px-2 rounded-xl">
-                            Go to credential page
+                            Go To Credential page
                         </button>
                     </a>
                     :

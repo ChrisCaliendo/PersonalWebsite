@@ -24,7 +24,7 @@ const ProjectCard = ({title, desc, photoUrl, elements, depoLink, gitLink}) => {
                     depoLink!="" &&
                     <a href={depoLink}>
                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold mb-2 py-1 px-2 mr-2 rounded-xl">
-                            Go to Deployment Site
+                            Go to Deployment
                         </button>
                     </a>
                 }
@@ -32,7 +32,7 @@ const ProjectCard = ({title, desc, photoUrl, elements, depoLink, gitLink}) => {
                     gitLink!="" &&
                     <a href={gitLink} className="">
                         <button className="bg-green-600 hover:bg-green-700 text-white font-bold mb-2 py-1 px-2 rounded-xl">
-                            Go to GitHub Page
+                            Go to GitHub page
                         </button>
                     </a>
                 }

@@ -21,7 +21,7 @@ const GameCard = ({title, desc, elements, photoUrl, gameLink, note}) => {
                     (gameLink!="" && gameLink!=null) ?
                     <a href={gameLink}>
                         <button className="bg-red-700 hover:bg-red-900 text-white font-bold py-1 px-2 rounded-xl">
-                            Go to Itch.io Page
+                            Go to Itch.io page
                         </button>
                     </a>
                     :

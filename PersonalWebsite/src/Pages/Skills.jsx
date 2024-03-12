@@ -21,7 +21,7 @@ const Skills = () => {
                 <SkillBar name="Flask" progress={60}/>
                 <SkillBar name="React Native" progress={60}/>
                 <SkillBar name="TypeScript" progress={60}/>
-                <SkillBar name="Angular" progress={20}/>
+                <SkillBar name="Angular" progress={60}/>
             </div>
             <div className=" bg-cyan-200 rounded-md shadow-md col-span-2 md:col-span-1">
                 <p className="text-2xl p-1 text-center">Methodologies</p>

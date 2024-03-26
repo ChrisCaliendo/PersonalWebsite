@@ -10,7 +10,7 @@ const Skills = () => {
                 <SkillBar name="Java" progress={100}/>
                 <SkillBar name="JavaScript" progress={100}/>
                 <SkillBar name="Python" progress={80}/>
-                <SkillBar name="C#" progress={60}/>
+                <SkillBar name="C#" progress={80}/>
                 <SkillBar name="SQL" progress={60}/>
                 <SkillBar name="C++" progress={20}/>
             </div>

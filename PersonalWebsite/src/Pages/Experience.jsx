@@ -12,7 +12,7 @@ import CertificateCard from "../Components/CardComponents/CertificateCard";
 const Experience = () => {
     return ( 
         <>
-        <p className="text-4xl bg-emerald-400 flex justify-center font-ptSans font-bold">Experience</p>
+        <p className="mh-4 text-4xl bg-emerald-400 flex justify-center font-ptSans font-bold">Experience</p>
         
             
         <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:gap-8 md:gap-4 gap-4 p-4 md:mx-5 place-content-evenly font-ptSans font-bold md:rounded">
@@ -32,7 +32,7 @@ const Experience = () => {
                     }
                 />
             </div>
-            <div className="p-1 bg-emerald-600 rounded-3xl shadow-md">
+            <div className="mh-4 p-1 bg-emerald-600 rounded-3xl shadow-md">
                 <ExpCard
                     title="Software Engineer"
                     employer="Gaming and Emerging Technologies Club"

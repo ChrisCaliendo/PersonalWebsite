@@ -28,7 +28,7 @@ const Experience = () => {
                             <li>Developed frontend components and web applications using experimental web-based code editor and javascript framework leveraging prior knowlege of Javascript, Jquery, React, Angular and Css</li>
                             <li>Gave reports on bugs with the framework on the company platform, missing documentation, suggested features to aid in user productivity and provided feedback on new features</li>
                             <li>Completed 4 projects utilizing the Symbols in-development framework DOMQL to create reusable components and pages to be available on company platform while following Figma guidelines for design and functionality requirements</li>
-                            <li>Aided in assistance of other interns to teach them how to set up backend services, connect with API's and help them understand how to better use the company plateform and framework</li>
+                            <li>Aided in assistance of other interns to teach them how to set up backend services, connect with API's and help them understand how to better use the company platform and framework</li>
                         </ul>
                     }
                 />

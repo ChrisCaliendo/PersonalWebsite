@@ -16,15 +16,9 @@ const ExpCard = ({title, desc, photoUrl, employer}) => {
                     }
                 </div>
                 <div className="flex items-stretch row-end px-3 py-2 rounded-b-2xl border-t-4 border-slate-800 col-span-2 bg-white bg-opacity-50 h-full">
-                <p className="">{desc}</p>
+                    <p className="">{desc}</p>
+                </div>
             </div>
-            
-            </div>
-            
-            
-            
-            
-
         </div>
     );
 }

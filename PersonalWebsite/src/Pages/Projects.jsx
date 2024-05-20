@@ -14,7 +14,7 @@ const Projects = () => {
         <>
         <p className="text-4xl flex justify-center font-ptSans font-bold">Projects</p>
         <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:gap-8 md:gap-4 gap-4 p-4 md:mx-5 place-content-evenly font-ptSans font-bold md:rounded">
-        <mark className=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">Websites and Applications</mark>
+        <mark className=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold px-2 text-white bg-emerald-800 rounded">Websites and Applications</mark>
             <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
                 <ProjectCard
                     title="Eloquent Reviews"

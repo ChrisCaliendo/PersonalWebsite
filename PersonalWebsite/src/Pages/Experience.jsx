@@ -24,8 +24,8 @@ const Experience = () => {
                     employer="Symbols"
                     photoUrl={SymbolsLogo}
                     desc={
-                        <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
-                            <li>Developed frontend components and web applications using experimental web-based code editor and javascript framework leveraging prior knowlege of Javascript, Jquery, React, Angular and Css</li>
+                        <ul className="px-5 my-2 space-y-1 list-disc list-inside">
+                            <li>Developed frontend components and web applications using experimental web-based code editor and javascript framework leveraging prior knowlege of Javascript, Jquery, React, Angular and CSS</li>
                             <li>Gave reports on bugs with the framework on the company platform, missing documentation, suggested features to aid in user productivity and provided feedback on new features</li>
                             <li>Completed 4 projects utilizing the Symbols in-development framework DOMQL to create reusable components and pages to be available on company platform while following Figma guidelines for design and functionality requirements</li>
                             <li>Aided in assistance of other interns to teach them how to set up backend services, connect with API's and help them understand how to better use the company platform and framework</li>
@@ -39,7 +39,7 @@ const Experience = () => {
                     employer="Career Advantage Inc."
                     photoUrl={CareerAdvantageLogo}
                     desc={
-                        <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
+                        <ul className="px-5 my-2 space-y-1 list-disc list-inside">
                             <li>Spearheaded the transformation of the company website using React and TailwindCSS, resulting in a modernized and user-friendly interface</li>
                             <li>Engineered a dynamic job listing page for real-time display of hundreds of listings, boosting user efficiency</li>
                             <li>Employed responsive web design techniques to optimize the website for seamless usage and accessibility across devices</li>
@@ -54,7 +54,7 @@ const Experience = () => {
                     employer="Gaming and Emerging Technologies Club"
                     photoUrl={GETlogo}
                     desc={
-                        <ul className="ps-5 mt-2 space-y-1 list-disc list-inside">
+                        <ul className="px-5 my-2 space-y-1 list-disc list-inside">
                             <li>Contributed to 5 major group projects involving programming with C# and Unity Game Engine to develop games with groups ranging from 4-8 people</li>
                             <li>Created and finished 2 award-winning and publicly accessible games with collaboration from many participants with wide variety of skill sets</li>
                             <li>Managed a team of 5 to develop AR technology using Unreal Engine and C++</li>

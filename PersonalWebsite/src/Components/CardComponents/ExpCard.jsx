@@ -10,8 +10,8 @@ const ExpCard = ({title, desc, photoUrl, employer}) => {
                     </div>
                     {
                     (photoUrl != "" && photoUrl != null) &&
-                    <div className="flex aspect-square min-h-24 max-w-24 min-w-24 xs:min-h-32 xs:max-w-32 xs:min-w-32 sm:max-w-40 sm:min-w-40">
-                        <img className="object-fill m-2 rounded-2xl border-8 border-slate-800" src={photoUrl} alt="No Photo Available :(" />
+                    <div className="flex justify-end">
+                        <img className="object-fill aspect-square w-20  xs:min-h-32 xs:max-w-32 xs:min-w-32 sm:max-w-40 sm:min-w-40 ml-2 my-2 rounded-2xl border-8 border-slate-800" src={photoUrl} alt="No Photo Available :(" />
                     </div>
                     }
                 </div>

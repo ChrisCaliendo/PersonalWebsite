@@ -43,7 +43,7 @@ const itExperienceItems = [
 
 const softwareExperienceItems = [
   {
-    title: "Web Developer Intern and QA Tester",
+    title: "Software Engineer and QA Intern",
     employer: "Symbols",
     photoUrl: SymbolsLogo,
     period: "April 2024 – July 2024",
@@ -56,7 +56,7 @@ const softwareExperienceItems = [
     ],
   },
   {
-    title: "Software Engineer",
+    title: "Frontend Web Developer",
     employer: "Career Advantage Inc.",
     photoUrl: CareerAdvantageLogo,
     period: "November 2023 – February 2024",
@@ -69,7 +69,7 @@ const softwareExperienceItems = [
     ],
   },
   {
-    title: "Software Engineer",
+    title: "Programmer and Game Developer",
     employer: "Gaming and Emerging Technologies Club",
     photoUrl: GETlogo,
     period: "October 2021 – October 2023",

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-
 import Header from "./Components/HeaderComponents/Header";
+import HomeAmbient from "./Components/OtherComponents/HomeAmbient";
 
 import Home from "./Pages/Home";
 import Skills from './Pages/Skills';
@@ -14,6 +14,7 @@ function App() {
     <>
       <Router>
         <main className="site-main">
+          <HomeAmbient />
           <Header />
           <Routes>
             <Route exact path="/" element={<Home />} />

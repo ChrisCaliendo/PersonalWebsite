@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import HomeAmbient from "../Components/OtherComponents/HomeAmbient";
 
 const ArrowIcon = () => (
   <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
@@ -16,12 +15,11 @@ const ArrowIcon = () => (
 const Home = () => (
   <div className="home-page">
     <section className="home-hero" aria-labelledby="home-title">
-      <HomeAmbient />
       <div className="home-hero-copy">
         <p className="home-eyebrow">Software engineer · Creative builder</p>
         <h1 className="home-title" id="home-title">
           Christian
-          <span>Caliendo.</span>
+          <span className="tracker-widest">Caliendo.</span>
         </h1>
         <p className="home-intro">
           I build thoughtful web experiences and playful software, bringing

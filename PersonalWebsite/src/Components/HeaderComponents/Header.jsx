@@ -21,7 +21,10 @@ const Header = () => {
     <header className="site-header">
       <nav className="site-nav" aria-label="Main navigation">
         <Link className="site-brand" to="/">
-          <span>Christian Caliendo</span>
+          <span className="site-brand-name">
+            <span>Christian</span>
+            <span>Caliendo</span>
+          </span>
         </Link>
 
         <button

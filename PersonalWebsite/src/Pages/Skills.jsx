@@ -81,13 +81,9 @@ const Skills = () => (
         >
           <header className="skills-card-header">
             <div>
-              <p className="skills-card-kicker">Category 0{index + 1}</p>
               <h2 className="skills-card-title">{group.title}</h2>
               <p className="skills-card-description">{group.description}</p>
             </div>
-            <span className="skills-card-count">
-              {group.skills.length} skills
-            </span>
           </header>
           <div className="skills-list">
             {group.skills.map(([name, progress]) => (

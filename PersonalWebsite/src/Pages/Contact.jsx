@@ -67,7 +67,7 @@ const Contact = () => (
       </div>
     </section>
     <p className="contact-note">
-      Prefer a quick message? You can reach me on LinkedIn too.
+      Prefer a quick message? You can reach me on LinkedIn.
     </p>
   </div>
 );

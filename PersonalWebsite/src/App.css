@@ -46,25 +46,24 @@ button:focus-visible {
 .site-brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   color: inherit;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
   text-decoration: none;
 }
 
-.site-brand-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
-  background: #d6e6d8;
-  color: #17362a;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
+.site-brand-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #f5f8f4;
+  line-height: 1.25;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-brand-name span:last-child {
+  letter-spacing: 0.19em;
 }
 
 .site-nav-links {
@@ -111,6 +110,8 @@ button:focus-visible {
 }
 
 .site-main {
+  position: relative;
+  isolation: isolate;
   min-height: calc(100vh - 76px);
 }
 
@@ -122,8 +123,8 @@ button:focus-visible {
 }
 
 .home-ambient {
-  position: absolute;
-  z-index: 0;
+  position: fixed;
+  z-index: -1;
   overflow: hidden;
   pointer-events: none;
   inset: 0;
@@ -183,7 +184,7 @@ button:focus-visible {
   color: #172c22;
   font-size: clamp(3.25rem, 7vw, 6.2rem);
   font-weight: 700;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.065em;
   line-height: 0.98;
 }
 
@@ -525,7 +526,7 @@ button:focus-visible {
   margin: 12px 0 0;
   color: #172c22;
   font-size: clamp(3.2rem, 8vw, 6rem);
-  letter-spacing: -0.08em;
+  letter-spacing: -0.07em;
   line-height: 1;
 }
 
@@ -1048,6 +1049,7 @@ button:focus-visible {
 }
 
 .experience-page {
+  position: relative;
   width: min(1120px, calc(100% - 48px));
   margin: 0 auto;
   padding: 58px 0 80px;
@@ -1111,29 +1113,6 @@ button:focus-visible {
   color: #5d695f;
   font-size: 1.08rem;
   line-height: 1.7;
-}
-
-.experience-summary {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  margin-top: 24px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.experience-summary span {
-  padding: 8px 13px;
-  border: 1px solid #dce5dc;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.84);
-  color: #637168;
-  font-size: 0.84rem;
-}
-
-.experience-summary strong {
-  margin-right: 4px;
-  color: #28563b;
 }
 
 .experience-section {
@@ -1545,15 +1524,6 @@ button:focus-visible {
   gap: 12px;
 }
 
-.skills-card-kicker {
-  margin: 0 0 7px;
-  color: #8a9b8e;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
 .skills-card-title {
   margin: 0;
   color: #1c3025;
@@ -1565,26 +1535,6 @@ button:focus-visible {
   margin: 4px 0 0;
   color: #879188;
   font-size: 0.88rem;
-}
-
-.skills-card-count {
-  display: inline-flex;
-  padding: 8px 11px;
-  flex: 0 0 auto;
-  align-items: center;
-  border: 1px solid #e1e9e1;
-  border-radius: 999px;
-  background: #f3f6f1;
-  color: #52745b;
-  font-size: 0.76rem;
-  font-weight: 700;
-  white-space: nowrap;
-  transition: background-color 220ms ease, border-color 220ms ease;
-}
-
-.skills-card:hover .skills-card-count {
-  background: #e4eee4;
-  border-color: #d0dfd0;
 }
 
 .skills-list {

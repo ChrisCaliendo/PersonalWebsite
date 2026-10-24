@@ -8,6 +8,7 @@ import ComptiaLogo from "../Assets/CompTIA_A_2B.png";
 import BaruchLogo from "../Assets/baruch.jpg";
 import BPLlogo from "../Assets/brooklyn_public_library_logo.jpg";
 import GJClogo from "../Assets/GJClogo.jpg";
+import CCNAlogo from "../Assets/CCNANAlogo.png";
 
 import ExpCard from "../Components/CardComponents/ExpCard";
 import EducationCard from "../Components/CardComponents/EducationCard";
@@ -36,7 +37,6 @@ const itExperienceItems = [
       "Supported recovery from a malware incident by assisting with system reimaging, reinstalling critical drivers, and reconnecting workstations to the office file share.",
       "Troubleshot hardware and software issues across employee workstations, including connectivity problems and peripheral malfunctions.",
       "Maintained documentation for system configurations and support procedures to streamline issue resolution and support business continuity.",
-      "Assisted with routine maintenance, including software updates, printer configuration, and network equipment upkeep.",
     ],
   },
 ];
@@ -109,13 +109,19 @@ const certifications = [
     company: "Amazon Web Services",
     photoUrl: awsCP,
     certLink:
-      "https://www.credly.com/badges/279841b4-e562-4bde-9169-61b23df670d4/linked_in_profile",
+      "https://www.credly.com/badges/279841b4-e562-4bde-9169-61b23df670d4/public_url",
   },
   {
     title: "CompTIA A+",
     company: "CompTIA",
     photoUrl: ComptiaLogo,
-    certLink: "",
+    certLink: "https://www.credly.com/badges/56b0f011-a63f-4d6f-80fc-a8305a44e26b/public_url",
+  },
+  {
+    title: "CCNA: Introduction to Networks",
+    company: "Cisco",
+    photoUrl: CCNAlogo,
+    certLink: "https://www.credly.com/badges/93570a03-c826-44bc-9689-9c3c569616ca/public_url",
   },
 ];
 
@@ -128,13 +134,6 @@ const Experience = () => (
         Explore my experience across IT support, software engineering,
         collaborative projects, education, and certifications.
       </p>
-      <div className="experience-summary" aria-label="Experience overview">
-        <span>
-          <strong>{itExperienceItems.length + softwareExperienceItems.length}</strong> roles
-        </span>
-        <span><strong>{educationItems.length}</strong> schools</span>
-        <span><strong>{certifications.length}</strong> certifications</span>
-      </div>
     </header>
 
     <section className="experience-section" aria-labelledby="it-experience-heading">

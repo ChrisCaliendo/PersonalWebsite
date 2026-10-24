@@ -6,16 +6,48 @@ import CareerAdvantageLogo from "../Assets/CareerAdvantageLogo.jpeg";
 import SymbolsLogo from "../Assets/symbo_ls_logo.jpg";
 import ComptiaLogo from "../Assets/CompTIA_A_2B.png";
 import BaruchLogo from "../Assets/baruch.jpg";
+import BPLlogo from "../Assets/brooklyn_public_library_logo.jpg";
+import GJClogo from "../Assets/GJClogo.jpg";
 
 import ExpCard from "../Components/CardComponents/ExpCard";
 import EducationCard from "../Components/CardComponents/EducationCard";
 import CertificateCard from "../Components/CardComponents/CertificateCard";
 
-const experienceItems = [
+const itExperienceItems = [
+  {
+    title: "Technology Resource Specialist",
+    employer: "Brooklyn Public Library",
+    photoUrl: BPLlogo,
+    period: "July 2025 – Present",
+    location: "Brooklyn, NY",
+    achievements: [
+      "Provide Level 1 technical support by troubleshooting printer issues, diagnosing laptop hardware problems, and helping patrons install and use software.",
+      "Maintain an inventory of 100+ electronic devices, reviewing it weekly to ensure equipment meets library standards and is ready for use.",
+      "Document and escalate complex support tickets, assisting higher-level IT staff with repairs and resolutions.",
+    ],
+  },
+  {
+    title: "IT Assistant",
+    employer: "Caliendo Architects",
+    photoUrl: GJClogo,
+    period: "November 2024 – June 2025",
+    location: "Briarwood, NY",
+    achievements: [
+      "Supported recovery from a malware incident by assisting with system reimaging, reinstalling critical drivers, and reconnecting workstations to the office file share.",
+      "Troubleshot hardware and software issues across employee workstations, including connectivity problems and peripheral malfunctions.",
+      "Maintained documentation for system configurations and support procedures to streamline issue resolution and support business continuity.",
+      "Assisted with routine maintenance, including software updates, printer configuration, and network equipment upkeep.",
+    ],
+  },
+];
+
+const softwareExperienceItems = [
   {
     title: "Web Developer Intern and QA Tester",
     employer: "Symbols",
     photoUrl: SymbolsLogo,
+    period: "April 2024 – July 2024",
+    location: "Wilmington, DE",
     achievements: [
       "Developed frontend components and web applications using the experimental DOMQL framework, drawing on JavaScript, jQuery, React, Angular, and CSS.",
       "Reported framework bugs, documentation gaps, and feature ideas to improve the platform and user productivity.",
@@ -27,6 +59,8 @@ const experienceItems = [
     title: "Software Engineer",
     employer: "Career Advantage Inc.",
     photoUrl: CareerAdvantageLogo,
+    period: "November 2023 – February 2024",
+    location: "Pasadena, CA",
     achievements: [
       "Led the company website transformation using React and Tailwind CSS, delivering a more modern and user-friendly experience.",
       "Engineered a dynamic job-listing page to display hundreds of listings in real time.",
@@ -38,6 +72,8 @@ const experienceItems = [
     title: "Software Engineer",
     employer: "Gaming and Emerging Technologies Club",
     photoUrl: GETlogo,
+    period: "October 2021 – October 2023",
+    location: "Jamaica, NY",
     achievements: [
       "Contributed to five major group projects using C# and Unity, working with teams of four to eight people.",
       "Collaborated on two award-winning games made available to the public.",
@@ -89,25 +125,51 @@ const Experience = () => (
       <p className="experience-eyebrow">The path so far</p>
       <h1 className="experience-title">Experience<span>.</span></h1>
       <p className="experience-description">
-        A blend of professional work, collaborative projects, education, and
-        certifications that keeps me building and learning.
+        Explore my experience across IT support, software engineering,
+        collaborative projects, education, and certifications.
       </p>
       <div className="experience-summary" aria-label="Experience overview">
-        <span><strong>{experienceItems.length}</strong> roles</span>
+        <span>
+          <strong>{itExperienceItems.length + softwareExperienceItems.length}</strong> roles
+        </span>
         <span><strong>{educationItems.length}</strong> schools</span>
         <span><strong>{certifications.length}</strong> certifications</span>
       </div>
     </header>
 
-    <section className="experience-section" aria-labelledby="work-heading">
+    <section className="experience-section" aria-labelledby="it-experience-heading">
       <div className="experience-section-heading">
         <div>
-          <p className="experience-section-kicker">Where I&apos;ve contributed</p>
-          <h2 id="work-heading">Work &amp; projects</h2>
+          <p className="experience-section-kicker">Current role &amp; prior experience</p>
+          <h2 id="it-experience-heading">IT &amp; Technical Support</h2>
         </div>
       </div>
       <div className="experience-work-grid">
-        {experienceItems.map((item) => (
+        {itExperienceItems.map((item) => (
+          <ExpCard
+            key={item.employer}
+            {...item}
+            desc={
+              <ul className="experience-achievements">
+                {item.achievements.map((achievement) => (
+                  <li key={achievement}>{achievement}</li>
+                ))}
+              </ul>
+            }
+          />
+        ))}
+      </div>
+    </section>
+
+    <section className="experience-section" aria-labelledby="software-experience-heading">
+      <div className="experience-section-heading">
+        <div>
+          <p className="experience-section-kicker">Building products &amp; creative technology</p>
+          <h2 id="software-experience-heading">Software Engineering &amp; Projects</h2>
+        </div>
+      </div>
+      <div className="experience-work-grid">
+        {softwareExperienceItems.map((item) => (
           <ExpCard
             key={item.employer}
             {...item}

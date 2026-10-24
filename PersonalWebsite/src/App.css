@@ -1272,6 +1272,13 @@ button:focus-visible {
   font-weight: 700;
 }
 
+.experience-work-meta {
+  margin: 5px 0 0;
+  color: #778279;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
 .experience-card-divider {
   height: 1px;
   margin: 18px 0;

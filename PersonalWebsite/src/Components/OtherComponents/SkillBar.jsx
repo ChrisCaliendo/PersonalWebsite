@@ -1,34 +1,36 @@
-const SkillBar = ({name, progress}) => {
-    let level = "In Progress";
-    if (progress<=20) {
-        level = "Beginner";
-    } else if (progress<=40) {
-        level = "Intermediate";
-    } else if (progress<=60) {
-        level = "Proficient";
-    } else if (progress<=80) {
-        level = "Exceptional";
-    } else {
-        level = "Expert";
-    }
+const getLevel = (progress) => {
+  if (progress <= 20) return "Beginner";
+  if (progress <= 40) return "Intermediate";
+  if (progress <= 60) return "Proficient";
+  if (progress <= 80) return "Exceptional";
+  return "Expert";
+};
 
-    return (  
-        <div className="px-5 pb-4 ">
-            <div className="bg-white bg-opacity-50 rounded-t-lg">
-                <p className="pl-3 opacity-100">
-                    {name} 
-                </p>
-            </div>
-            <div className="bg-slate-400 bg-opacity-50 rounded-b-lg font-bold">
-                <div 
-                    className="opacity-100 p-1 bg-green-700 text-xs font-medium text-blue-100 text-left leading-none rounded-b-lg "
-                    style={{width: `${progress}%`}}
-                > 
-                <p className="pl-2 opacity-100">{level}</p>
-                    
-                </div> 
-            </div>
-        </div>
-    );
-}
+const SkillBar = ({ name, progress }) => {
+  const level = getLevel(progress);
+
+  return (
+    <div className="skill-row">
+      <div className="skill-row-heading">
+        <span className="skill-name">{name}</span>
+        <span className="skill-level">{level}</span>
+      </div>
+      <div
+        className="skill-track"
+        role="progressbar"
+        aria-label={`${name} proficiency`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={progress}
+        aria-valuetext={level}
+      >
+        <span
+          className="skill-progress"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+    </div>
+  );
+};
+
 export default SkillBar;

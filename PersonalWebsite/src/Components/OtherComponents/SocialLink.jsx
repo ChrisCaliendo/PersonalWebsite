@@ -1,10 +1,19 @@
-const SocialLink = ({ picture, link}) => {
-    return (  
-        <div className="px-3">
-            <a href={link}>
-                <img className="w-16 rounded-full  border-4 border-white hover:border-slate-300" src={picture} alt="" />
-            </a>
-        </div>
-    );
-}
+const SocialLink = ({ name, detail, picture, link }) => (
+  <a
+    className="contact-social-card"
+    href={link}
+    target="_blank"
+    rel="noreferrer"
+  >
+    <span className="contact-social-icon">
+      <img src={picture} alt="" />
+    </span>
+    <span className="contact-social-copy">
+      <span className="contact-social-name">{name}</span>
+      <span className="contact-social-detail">{detail}</span>
+    </span>
+    <span className="contact-social-arrow" aria-hidden="true">↗</span>
+  </a>
+);
+
 export default SocialLink;

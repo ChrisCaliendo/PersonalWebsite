@@ -1,37 +1,30 @@
-const GameCard = ({title, desc, elements, photoUrl, gameLink, note}) => {
-    return ( 
-        <div className="p-3 grid grid-cols-1 grid-rows-1 place-content-center h-full">
-            <div className="px-3 py-2 rounded-tl-2xl border-r-2 border-slate-800 bg-slate-200">
-                <p className="text-2xl">{title}</p>
-                <div>
-                    <p>Made with:</p>
-                    <p className="italic">{elements}</p>
-                </div>
-
-                <p className="pb-3">{desc}</p>
-                
-                
-            </div>
-            <div className="rounded-tr-2xl border-l-2 border-slate-800 ">
-                <img className=" object-cover xl:h-60 xl:w-80 h-60 w-40  rounded-tr-2xl bg-blue-400 " src={photoUrl} alt="No Photo Available :(" />
-            </div>
-            
-            <div className="px-3 py-2 rounded-b-2xl border-t-4 border-slate-800 col-span-2 bg-white bg-opacity-50">
-                {
-                    (gameLink!="" && gameLink!=null) ?
-                    <a href={gameLink}>
-                        <button className="bg-red-700 hover:bg-red-900 text-white font-bold py-1 px-2 rounded-xl">
-                            Go to Itch.io page
-                        </button>
-                    </a>
-                    :
-                    <p>No link available at this time</p>
-                    
-                }
-                <p>{note}</p>
-            </div>
-
+const GameCard = ({ title, desc, elements, photoUrl, gameLink, note }) => (
+  <article className="project-card project-game-card">
+    <div className="project-card-media project-game-media">
+      <img src={photoUrl} alt={`${title} game artwork`} />
+      <span className="project-game-platform">{elements}</span>
+    </div>
+    <div className="project-card-content">
+      <div className="project-game-heading">
+        <h2 className="project-card-title">{title}</h2>
+        <span className="project-game-type">Game</span>
+      </div>
+      <div className="project-card-description">{desc}</div>
+      <p className="project-game-note">{note}</p>
+      {gameLink && (
+        <div className="project-card-actions">
+          <a
+            className="project-action project-action-primary"
+            href={gameLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Play on itch.io <span aria-hidden="true">↗</span>
+          </a>
         </div>
-    );
-}
+      )}
+    </div>
+  </article>
+);
+
 export default GameCard;

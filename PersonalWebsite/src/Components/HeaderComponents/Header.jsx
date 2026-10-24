@@ -1,74 +1,78 @@
-import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import HeaderLink from './HeaderLink';
-import PhoneHeaderLink from './PhoneHeaderLink';
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
+const navigation = [
+  { name: "Home", pathway: "/" },
+  { name: "Skills", pathway: "/skills" },
+  { name: "Experience", pathway: "/experience" },
+  { name: "Projects", pathway: "/projects" },
+  { name: "Contact", pathway: "/contact" },
+];
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
-    const [isMobile, setIsMobile] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
-    
-    const location = useLocation();
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
-  // Define a function to determine if the link is active based on the current pathname
-    const isActive = (path) => {
-        return location.pathname === path ? 'active' : '';
-    };
-    
-    useEffect(() => {
-        const handleResize = () => {
-          setIsMobile(window.innerWidth <= 770); // Adjust the threshold as needed
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => {
-        window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-        
-    return (  
-        <>
-        <div className="text-white bg-slate-800">
-        <nav className="bg-emerald-600 p-4">
-        {isMobile ? 
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <div className="text-white text-xl font-bold">Christian Caliendo</div>
-            <button onClick={(e) => setIsOpen(!isOpen)} type="button" className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" aria-expanded="false">
-                <span className="sr-only">Open main menu</span>
-                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
-            { isOpen &&
-                <div className="w-full" id="navbar-hamburger">
-                <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                    <PhoneHeaderLink name="Home" pathway="/"/>
-                    <PhoneHeaderLink name="Skills" pathway="/skills"/>
-                    <PhoneHeaderLink name="Experience" pathway="/experience"/>
-                    <PhoneHeaderLink name="Projects" pathway="/projects"/>
-                    <PhoneHeaderLink name="Contact" pathway="/contact"/>
-                </ul>
-                </div>
-            }
-            
-            </div>
-        :
-            <div className="container mx-auto flex items-center justify-between">
-            <div className="text-white text-xl font-bold">Christian Caliendo</div>
-            <ul className="flex space-x-4">
-                <HeaderLink name="Home" pathway="/"/>
-                <HeaderLink name="Skills" pathway="/skills"/>
-                <HeaderLink name="Experience" pathway="/experience"/>
-                <HeaderLink name="Projects" pathway="/projects"/>
-                <HeaderLink name="Contact" pathway="/contact"/>
-            </ul>
-            </div>
-        }
-        
-        </nav>
-        </div>
-        </>
-    );
-}
+  return (
+    <header className="site-header">
+      <nav className="site-nav" aria-label="Main navigation">
+        <Link className="site-brand" to="/">
+          <span>Christian Caliendo</span>
+        </Link>
+
+        <button
+          className="site-menu-toggle"
+          type="button"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-controls="site-navigation"
+          aria-expanded={isOpen}
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          {isOpen ? (
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+              <path
+                d="m6 6 12 12M18 6 6 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          ) : (
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 7h16M4 12h16M4 17h16"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          )}
+        </button>
+
+        <ul
+          className={`site-nav-links${isOpen ? " is-open" : ""}`}
+          id="site-navigation"
+        >
+          {navigation.map(({ name, pathway }) => (
+            <li key={pathway}>
+              <Link
+                className="site-nav-link"
+                to={pathway}
+                aria-current={location.pathname === pathway ? "page" : undefined}
+                onClick={() => setIsOpen(false)}
+              >
+                {name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
 export default Header;

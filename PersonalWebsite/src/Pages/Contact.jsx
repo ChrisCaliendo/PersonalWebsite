@@ -4,59 +4,72 @@ import ItchIcon from "../Assets/ItchIcon.png";
 
 import SocialLink from "../Components/OtherComponents/SocialLink";
 
-const Contact = () => {
-    return ( 
-        <>
-                        <p className="text-4xl flex justify-center  font-ptSans font-bold">Contact</p>
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    detail: "Connect professionally",
+    picture: LinkedInIcon,
+    link: "https://www.linkedin.com/in/christiancaliendo/",
+  },
+  {
+    name: "GitHub",
+    detail: "Explore my code",
+    picture: GithubIcon,
+    link: "https://github.com/ChrisCaliendo",
+  },
+  {
+    name: "itch.io",
+    detail: "Play my games",
+    picture: ItchIcon,
+    link: "https://calcym.itch.io/",
+  },
+];
 
-        <div className="bg-emerald-500 grid lg:grid-cols-2 md:grid-cols-1 gap-40 place-content-around p-10 lg:p-20">
-            
-            <div className=" bg-emerald-800 text-white col-span-1 font-semibold">
-                <div className="border-b-4 border-white text-xl px-6 py-2" >
-                    <p className=" text-center">Follow Me</p>
-                </div>
-                <div className="flex px-5 py-2 bg-emerald-700 place-content-center">
-                    <SocialLink
-                        picture={LinkedInIcon}
-                        link="https://www.linkedin.com/in/christiancaliendo/"
-                    />
-                    <SocialLink
-                        picture={GithubIcon}
-                        link="https://github.com/ChrisCaliendo"
-                    />
-                    <SocialLink
-                        picture={ItchIcon}
-                        link="https://calcym.itch.io/"
-                    />
-                    
-                </div>
-                
-                
-                <br/>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-            </div>
-            <div className=" text-center bg-emerald-800 text-white col-span-1 font-semibold">
-                <div className="border-b-4 border-white text-xl px-6 py-2" >
-                    <p className=" text-center">Contact Me</p>
-                </div>
-                <div className="px-5 py-2 bg-emerald-700">
-                    <p>Email Me: christiantcaliendo@gmail.com</p>
-                    <p>You can also message me on Linkedin</p>
-                </div>
-                
-                
-                <br/>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-            </div>
-            
-        </div>
-        </>
-    );
-}
+const Contact = () => (
+  <div className="contact-page">
+    <header className="contact-intro">
+      <p className="contact-eyebrow">Have a project in mind?</p>
+      <h1 className="contact-title">Let&apos;s talk<span>.</span></h1>
+      <p className="contact-description">
+        I&apos;m always happy to connect about software, creative projects, and
+        opportunities to build something useful together.
+      </p>
+      <a
+        className="contact-email-button"
+        href="mailto:christiantcaliendo@gmail.com"
+      >
+        <span className="contact-email-icon" aria-hidden="true">@</span>
+        <span>
+          <span className="contact-email-label">Send me an email</span>
+          <span className="contact-email-address">christiantcaliendo@gmail.com</span>
+        </span>
+        <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
+          <path
+            d="M4.167 10h11.666M10 4.167 15.833 10 10 15.833"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </a>
+    </header>
+
+    <section className="contact-social-section" aria-labelledby="connect-heading">
+      <div className="contact-section-heading">
+        <p className="contact-section-kicker">Find me around the web</p>
+        <h2 id="connect-heading">More ways to connect</h2>
+      </div>
+      <div className="contact-social-grid">
+        {socialLinks.map((social) => (
+          <SocialLink key={social.name} {...social} />
+        ))}
+      </div>
+    </section>
+    <p className="contact-note">
+      Prefer a quick message? You can reach me on LinkedIn too.
+    </p>
+  </div>
+);
+
 export default Contact;

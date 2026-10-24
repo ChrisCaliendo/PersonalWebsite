@@ -1,55 +1,91 @@
 import { Link } from "react-router-dom";
-import Arrow from "../Assets/Arrow.svg";
+import HomeAmbient from "../Components/OtherComponents/HomeAmbient";
 
-const Home = () => {
-    return ( 
-        <>
-        <div className="bg-emerald-500 grid lg:grid-cols-2 md:grid-cols-1 gap-40 place-content-around p-10 lg:p-20">
-            <div className="col-span-1 text-white text-6xl font-ptSans font-bold container">
-                <p className="">Hello, My name is </p>
-                <p className="">Christian Caliendo</p>
-                <div className=" py-12 container">
-                <Link to="/projects"><button className="flex my-3 bg-white text-slate-800 text-xl rounded-3xl pl-5 p-2 hover:bg-slate-100 hover:shadow-lg hover:-translate-y-2 ease-in-out duration-100">See My Work <img src={Arrow} alt="Logo" width="30" /></button></Link>
-                <Link to="/experience"><button className="flex my-3 bg-white text-slate-800 text-xl rounded-3xl pl-5 p-2 hover:bg-slate-100 hover:shadow-lg hover:-translate-y-2 ease-in-out duration-100">See My Experience <img src={Arrow} alt="Logo" width="30" /></button></Link>
-                
-                </div>
-                
-            </div>
-            <div className=" bg-emerald-800 text-white col-span-1 font-semibold">
-                <div className="border-b-4 border-white text-xl px-6 py-2" >
-                    <p>My Story</p>
-                </div>
-                <div className="px-5 py-2 bg-emerald-700">
-                    <p className="p-1">
-                        My journey into the world of computer science began in high school when I first encountered programming, starting with the basics of Scratch. Even then, I found coding to be a captivating blend of creativity and problem-solving.
-                    </p>
-                    <p className="p-1">
-                        However, as I delved deeper into the field, I realized that the possibilities extended far beyond the confines of Scratch. During my time at St. John's University, I had the privilege of exploring various facets of computer science, which broadened my horizons considerably.
-                    </p>
-                    <p className="p-1">
-                        I gained proficiency in web design, learning how to create and host web applications using JavaScript, HTML, CSS, and Node.js. Additionally, I honed my skills in database management, mastering SQL and the fundamentals of database systems. Taking things further, I completed a software development course, where I integrated my web application expertise with my knowledge of SQL to develop full-fledged software applications.
-                    </p>
-                    <p className="p-1">
-                        My college experience was immensely enriching, not only for the knowledge it imparted but also for the incredible individuals I had the opportunity to collaborate with. Their talent and dedication constantly inspired me to strive for greatness.
-                    </p>
-                    <p className="p-1">
-                        After being being given recommendation by a friend, I became a member of the Gaming and Emerging Technology club, which exposed me to the fascinating world of game development. Through the club, I met exceptionally skilled individuals who encouraged me to explore game engines such as Godot and Unity. This led me to participate in numerous game jams, where I joined teams to create games within a week. I take immense pride in our collective achievements, as we emerged victorious in many of these endeavors.
-                    </p>
-                    <p className="p-1">
-                        As I continue to grow in the field of computer science, I look forward to embracing new challenges, collaborating with innovative minds, and pushing the boundaries of what's possible. Feel free to connect with me to discuss opportunities, share insights, or simply chat about the exciting realm of technology.
-                    </p>
-                </div>
-                
-                
-                <br/>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-            </div>
-            
+const ArrowIcon = () => (
+  <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
+    <path
+      d="M4.167 10h11.666M10 4.167 15.833 10 10 15.833"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const Home = () => (
+  <div className="home-page">
+    <section className="home-hero" aria-labelledby="home-title">
+      <HomeAmbient />
+      <div className="home-hero-copy">
+        <p className="home-eyebrow">Software engineer · Creative builder</p>
+        <h1 className="home-title" id="home-title">
+          Christian
+          <span>Caliendo.</span>
+        </h1>
+        <p className="home-intro">
+          I build thoughtful web experiences and playful software, bringing
+          curiosity, collaboration, and a love of problem-solving to every
+          project.
+        </p>
+        <div className="home-actions">
+          <Link className="home-button" to="/projects">
+            Explore my work <ArrowIcon />
+          </Link>
+          <Link className="home-button home-button-secondary" to="/contact">
+            Get in touch
+          </Link>
         </div>
-        </>
-    );
-}
+      </div>
+
+      <div className="home-art" aria-hidden="true">
+        <div className="home-art-ring" />
+        <div className="home-art-card">
+          <p className="home-art-label">A little bit of everything</p>
+          <div className="home-art-code">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="home-art-footer">
+            <span>Ideas → things that work</span>
+            <span className="home-art-dot" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section className="home-below" aria-label="A little about me">
+      <article className="home-story">
+        <p className="home-section-label">A little about me</p>
+        <h2 className="home-section-title">Curious by nature, builder by choice.</h2>
+        <p>
+          My path into computer science started with Scratch and grew into
+          full-stack development, databases, and game design at St. John&apos;s
+          University. I enjoy turning a rough idea into something useful—and
+          working with good people along the way.
+        </p>
+        <p>
+          Outside of web projects, game jams have introduced me to new tools,
+          creative teams, and the fun of making something under a deadline.
+        </p>
+        <Link className="home-text-link" to="/experience">
+          More about my experience <ArrowIcon />
+        </Link>
+      </article>
+
+      <aside className="home-highlights">
+        <p className="home-section-label">What I enjoy</p>
+        <h2 className="home-section-title">A mix of logic &amp; imagination.</h2>
+        <ul className="home-highlight-list">
+          <li>Building web apps from front to back</li>
+          <li>Making games with a team</li>
+          <li>Learning tools by putting them to work</li>
+        </ul>
+      </aside>
+    </section>
+  </div>
+);
+
 export default Home;

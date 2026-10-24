@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -14,18 +13,15 @@ function App() {
   return (
     <>
       <Router>
-        <main>
+        <main className="site-main">
           <Header />
-            <div className=''>
-              <Routes>
-                <Route exact path="/" element={<Home/>}/>
-                <Route path="/skills" element={<Skills/>}/>
-                <Route path="/projects" element={<Projects/>}/>
-                <Route path="/experience" element={<Experience/>}/>
-                <Route path="/contact" element={<Contact/>}/>
-              </Routes>
-            </div>
-            
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </main>
       </Router>
     </>

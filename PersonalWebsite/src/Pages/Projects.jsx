@@ -10,15 +10,24 @@ import MangoReaderImage from "../Assets/mango-reader.png";
 
 const Projects = () => {
   return (
-    <>
-      <p className="text-4xl flex justify-center font-ptSans font-bold">
-        Projects
-      </p>
-      <div className="bg-emerald-300 grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:gap-8 md:gap-4 gap-4 p-4 md:mx-5 place-content-evenly font-ptSans font-bold md:rounded">
+    <div className="projects-page">
+      <header className="projects-intro">
+        <p className="projects-eyebrow">A few things I&apos;ve made</p>
+        <h1 className="projects-title">Projects<span>.</span></h1>
+        <p className="projects-description">
+          A collection of web apps, experiments, dashboards, and games built
+          with great people and plenty of curiosity.
+        </p>
+        <div className="projects-summary" aria-label="Project overview">
+          <span><strong>8</strong> applications</span>
+          <span><strong>3</strong> games</span>
+        </div>
+      </header>
+      <div className="projects-grid">
         <mark className=" text-center md:col-span-1 lg:col-span-2 text-4xl font-bold px-2 text-white bg-emerald-800 rounded">
           Websites and Applications
         </mark>
-        <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+        <div className="project-tile">
           <ProjectCard
             title="Mango Reader"
             elements="Electron, React.js, PostgreSQL, Python, Flask, Redux, Docker"
@@ -26,16 +35,16 @@ const Projects = () => {
             desc={
               <ul className="ps-5 pb-2 space-y-1 list-disc list-inside">
                 <li>
-                  • Lead a team of 3 developers to create a full-stack desktop
+                  Led a team of 3 developers to create a full-stack desktop
                   application for a comic book/manga reader
                 </li>
                 <li>
-                  • Engineered frontend using React and Redux to allow for
+                  Engineered frontend using React and Redux to allow for
                   browsing of thousands of series and to store a library of
                   favorites locally
                 </li>
                 <li>
-                  • Implemented and managed a PostgreSQL database to handle and
+                  Implemented and managed a PostgreSQL database to handle and
                   store scraped comic information and images. As well as ran a
                   Flask server to handle HTTP requests and data transfer.
                 </li>
@@ -45,7 +54,7 @@ const Projects = () => {
             depoLink=""
           />
         </div>
-        <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+        <div className="project-tile">
           <ProjectCard
             title="Eloquent Reviews"
             elements="JavaScript, React.js, Tailwind, Python, Flask"
@@ -75,7 +84,7 @@ const Projects = () => {
             depoLink="https://eloquent-reviews.vercel.app/"
           />
         </div>
-        <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+        <div className="project-tile">
           <ProjectCard
             title="Web Analytics Dashboard"
             elements="Next.js, React.js, TypeScript, Redis"
@@ -102,7 +111,7 @@ const Projects = () => {
             depoLink=""
           />
         </div>
-        <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+        <div className="project-tile">
           <ProjectCard
             title="Cost Minus Drugs"
             elements="MongoDB, Express, React.js, Node.js, ChakraUI"
@@ -125,7 +134,7 @@ const Projects = () => {
             depoLink=""
           />
         </div>
-        <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+        <div className="project-tile">
           <ProjectCard
             title="Omniswipe"
             elements="React Native, Expo, Firebase Firestore, Git"
@@ -148,7 +157,7 @@ const Projects = () => {
             depoLink=""
           />
         </div>
-        <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+        <div className="project-tile">
           <ProjectCard
             title="Vehicle Cloud Management Software"
             elements="Java, JFrame, MySQL, Git"
@@ -174,7 +183,7 @@ const Projects = () => {
             depoLink=""
           />
         </div>
-        <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+        <div className="project-tile">
           <ProjectCard
             title="Airline Review Dashboard"
             elements="Tableau"
@@ -199,7 +208,7 @@ const Projects = () => {
             depoLink="https://public.tableau.com/app/profile/christian.caliendo/viz/AirlineReviewDashboard_17097834221560/Dashboard1?publish=yes"
           />
         </div>
-        <div className="p-1 bg-emerald-400 rounded-3xl shadow-md">
+        <div className="project-tile">
           <ProjectCard
             title="Checklist Web Application"
             elements="JavaScript, HTML, CSS, Bootstraps"
@@ -223,7 +232,7 @@ const Projects = () => {
         <mark className="text-center md:col-span-1 lg:col-span-2 text-4xl font-bold ppx-2 text-white bg-emerald-800 rounded">
           Games
         </mark>
-        <div className="bg-blue-300 rounded-3xl xl:col-span-1  shadow-md">
+        <div className="project-tile project-game-tile">
           <GameCard
             title="RiGBY"
             elements="Unity and C#"
@@ -233,7 +242,7 @@ const Projects = () => {
             note="Playable in browser or by download"
           />
         </div>
-        <div className="bg-blue-300 rounded-3xl xl:col-span-1  shadow-md">
+        <div className="project-tile project-game-tile">
           <GameCard
             title="Walbang!"
             elements="Unity and C#"
@@ -244,7 +253,7 @@ const Projects = () => {
           />
         </div>
 
-        <div className="bg-blue-300 rounded-3xl shadow-md lg:col-span-2 col-span-1 lg:w-1/2 justify-self-center">
+        <div className="project-tile project-game-tile">
           <GameCard
             title="Trash Job"
             elements="Unity and C#"
@@ -255,7 +264,7 @@ const Projects = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Projects;

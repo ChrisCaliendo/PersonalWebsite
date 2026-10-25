@@ -358,7 +358,8 @@ button:focus-visible {
   padding: 30px;
   border: 1px solid #e1e6df;
   border-radius: 22px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(2px);
 }
 
 .home-section-label {
@@ -406,7 +407,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #eaf0e9;
+  background: rgba(234, 240, 233, 0.8);
 }
 
 .home-highlight-list {

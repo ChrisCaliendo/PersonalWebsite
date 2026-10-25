@@ -17,6 +17,7 @@ const HomeAmbient = () => {
     let frameId;
     let width = 0;
     let height = 0;
+    const glowRadius = 260;
 
     const resizeCanvas = () => {
       const bounds = container.getBoundingClientRect();
@@ -49,15 +50,26 @@ const HomeAmbient = () => {
           0,
           pointer.x,
           pointer.y,
-          190,
+          glowRadius,
         );
-        glow.addColorStop(0, "rgba(116, 157, 119, 0.12)");
+        glow.addColorStop(0, "rgba(91, 145, 99, 0.32)");
+        glow.addColorStop(0.45, "rgba(116, 157, 119, 0.18)");
         glow.addColorStop(1, "rgba(116, 157, 119, 0)");
         context.fillStyle = glow;
-        context.fillRect(pointer.x - 190, pointer.y - 190, 380, 380);
+        context.fillRect(
+          pointer.x - glowRadius,
+          pointer.y - glowRadius,
+          glowRadius * 2,
+          glowRadius * 2,
+        );
       }
 
       particles.forEach((particle, index) => {
+        const pointerDistance = pointer.active
+          ? Math.hypot(particle.x - pointer.x, particle.y - pointer.y)
+          : Infinity;
+        const pointerInfluence = Math.max(0, 1 - pointerDistance / 190);
+
         if (!reducedMotion.matches) {
           particle.x += particle.vx;
           particle.y += particle.vy;
@@ -71,7 +83,7 @@ const HomeAmbient = () => {
             const distance = Math.hypot(dx, dy);
 
             if (distance < 125 && distance > 0) {
-              const force = (125 - distance) / 1250;
+              const force = (125 - distance) / 500;
               particle.x += (dx / distance) * force;
               particle.y += (dy / distance) * force;
             }
@@ -83,10 +95,16 @@ const HomeAmbient = () => {
           const distance = Math.hypot(particle.x - other.x, particle.y - other.y);
 
           if (distance < 125) {
+            const nearbyInfluence = Math.max(
+              pointerInfluence,
+              pointer.active
+                ? Math.max(0, 1 - Math.hypot(other.x - pointer.x, other.y - pointer.y) / 190)
+                : 0,
+            );
             context.beginPath();
             context.moveTo(particle.x, particle.y);
             context.lineTo(other.x, other.y);
-            context.strokeStyle = `rgba(72, 111, 79, ${(1 - distance / 125) * 0.13})`;
+            context.strokeStyle = `rgba(55, 103, 64, ${(1 - distance / 125) * (0.16 + nearbyInfluence * 0.3)})`;
             context.lineWidth = 1;
             context.stroke();
           }
@@ -94,7 +112,7 @@ const HomeAmbient = () => {
 
         context.beginPath();
         context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        context.fillStyle = "rgba(68, 111, 77, 0.28)";
+        context.fillStyle = `rgba(55, 103, 64, ${0.34 + pointerInfluence * 0.5})`;
         context.fill();
       });
     };
@@ -105,9 +123,9 @@ const HomeAmbient = () => {
     };
 
     const handlePointerMove = (event) => {
-      const bounds = container.getBoundingClientRect();
-      pointer.x = event.clientX - bounds.left;
-      pointer.y = event.clientY - bounds.top;
+      if (event.pointerType === "touch") return;
+      pointer.x = event.clientX;
+      pointer.y = event.clientY;
       pointer.active = true;
       if (reducedMotion.matches) drawFrame();
     };
@@ -125,8 +143,8 @@ const HomeAmbient = () => {
 
     const resizeObserver = new ResizeObserver(resizeCanvas);
     resizeObserver.observe(container);
-    container.addEventListener("pointermove", handlePointerMove, { passive: true });
-    container.addEventListener("pointerleave", handlePointerLeave);
+    window.addEventListener("pointermove", handlePointerMove, { passive: true });
+    window.addEventListener("pointerleave", handlePointerLeave);
     reducedMotion.addEventListener("change", handleMotionChange);
     resizeCanvas();
     if (!reducedMotion.matches) animate();
@@ -134,8 +152,8 @@ const HomeAmbient = () => {
     return () => {
       window.cancelAnimationFrame(frameId);
       resizeObserver.disconnect();
-      container.removeEventListener("pointermove", handlePointerMove);
-      container.removeEventListener("pointerleave", handlePointerLeave);
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("pointerleave", handlePointerLeave);
       reducedMotion.removeEventListener("change", handleMotionChange);
     };
   }, []);

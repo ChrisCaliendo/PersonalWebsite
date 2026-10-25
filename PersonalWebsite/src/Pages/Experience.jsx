@@ -1,6 +1,6 @@
 import GETlogo from "../Assets/GETlogo.png";
 import awsCP from "../Assets/awsCP.png";
-import QhstImage from "../Assets/QhstImage.jpeg";
+import QhstImage from "../Assets/QhstImage2.png";
 import StJohnsImage from "../Assets/StJohnsImage.png";
 import CareerAdvantageLogo from "../Assets/CareerAdvantageLogo.jpeg";
 import SymbolsLogo from "../Assets/symbo_ls_logo.jpg";

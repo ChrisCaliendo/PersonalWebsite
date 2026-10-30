@@ -12,9 +12,16 @@ const HomeAmbient = () => {
     if (!container || !canvas || !context) return undefined;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const pointer = { x: -1000, y: -1000, active: false };
+    const pointer = {
+      x: -1000,
+      y: -1000,
+      targetX: -1000,
+      targetY: -1000,
+      active: false,
+    };
     let particles = [];
     let frameId;
+    let lastFrameTime;
     let width = 0;
     let height = 0;
     const glowRadius = 260;
@@ -117,15 +124,27 @@ const HomeAmbient = () => {
       });
     };
 
-    const animate = () => {
+    const animate = (timestamp) => {
+      if (pointer.active && !reducedMotion.matches) {
+        const elapsed = lastFrameTime === undefined ? 0 : timestamp - lastFrameTime;
+        const smoothing = 1 - Math.exp(-elapsed / 85);
+        pointer.x += (pointer.targetX - pointer.x) * smoothing;
+        pointer.y += (pointer.targetY - pointer.y) * smoothing;
+      }
+
+      lastFrameTime = timestamp;
       drawFrame();
       if (!reducedMotion.matches) frameId = window.requestAnimationFrame(animate);
     };
 
     const handlePointerMove = (event) => {
       if (event.pointerType === "touch") return;
-      pointer.x = event.clientX;
-      pointer.y = event.clientY;
+      pointer.targetX = event.clientX;
+      pointer.targetY = event.clientY;
+      if (!pointer.active || reducedMotion.matches) {
+        pointer.x = pointer.targetX;
+        pointer.y = pointer.targetY;
+      }
       pointer.active = true;
       if (reducedMotion.matches) drawFrame();
     };
@@ -137,8 +156,14 @@ const HomeAmbient = () => {
 
     const handleMotionChange = () => {
       window.cancelAnimationFrame(frameId);
-      if (reducedMotion.matches) drawFrame();
-      else animate();
+      lastFrameTime = undefined;
+      if (reducedMotion.matches) {
+        pointer.x = pointer.targetX;
+        pointer.y = pointer.targetY;
+        drawFrame();
+      } else {
+        frameId = window.requestAnimationFrame(animate);
+      }
     };
 
     const resizeObserver = new ResizeObserver(resizeCanvas);
